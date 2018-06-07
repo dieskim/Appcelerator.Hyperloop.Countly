@@ -1,5 +1,5 @@
 // TO DO EVENT - ANDROID
-// TO DO USERDATA
+// TO DO USERDATA - ANDROID
 // TO DO ADD CRASH - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting
 // TO DO recordUncaughtException
 // TO DO addCrashLog
@@ -18,7 +18,10 @@ if(OS_IOS){
     // require CountlyConfig
     var CountlyConfigClass = require('Countly/CountlyConfig');
     var CountlyConfig = new CountlyConfigClass;
-     
+    
+    // require CountlyUserDetailsClass
+    var CountlyUserDetailsClass = require('Countly/CountlyUserDetails');
+
 }else{
      
     // require CountlyClass
@@ -191,17 +194,70 @@ exports.recordEvent = function(eventVars){
 };
  
 exports.userData = function (userVars){
-     
+    
+    Ti.API.log(userVars);
+
+    var userData = userVars.userData || false;
+    var customUserData = userVars.customUserData || false;
+
+    
+
     if(OS_IOS){
-         
-        // require CountlyUserDetailsClass
-        var CountlyUserDetailsClass = require('Countly/CountlyUserDetails'); // to do - move or try to do
-        //var CountlyUserDetailsClass = CountlyClass.user; // to do - move or try to do 
-        //var CountlyUserDetails = new CountlyUserDetailsClass;
-         
-        //var CountlyUserDetails = CountlyClass.sharedInstance().user;
-        CountlyUserDetailsClass.sharedInstance().name = "testName2";
-         
+        
+        if (userData){
+
+            if (userData.name){
+
+                CountlyUserDetailsClass.sharedInstance().name = userData.name;
+
+            }
+
+            if (userData.username){
+
+                CountlyUserDetailsClass.sharedInstance().username = userData.username;
+
+            }
+
+            if (userData.email){
+
+                CountlyUserDetailsClass.sharedInstance().email = userData.email;
+
+            } 
+
+            if (userData.birthYear){
+
+                CountlyUserDetailsClass.sharedInstance().birthYear = userData.birthYear;
+
+            }
+
+            if (userData.organization){
+
+                CountlyUserDetailsClass.sharedInstance().organization = userData.organization;
+
+            }
+
+            if (userData.gender){
+
+                CountlyUserDetailsClass.sharedInstance().gender = userData.gender;
+
+            } 
+
+            if (userData.phone){
+
+                CountlyUserDetailsClass.sharedInstance().phone = userData.phone;
+
+            }       
+
+        } 
+        
+        if (customUserData){
+
+            //var CountlyUserDetails = CountlyClass.sharedInstance().user;
+            CountlyUserDetailsClass.sharedInstance().custom = customUserData;
+
+        }
+
+        // send user details
         CountlyUserDetailsClass.sharedInstance().save();
          
     }else{
