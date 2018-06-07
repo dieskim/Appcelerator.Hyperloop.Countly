@@ -8,7 +8,7 @@
 // TO DO ADD GEOLOCTION - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation
 // TO DO ADD Symbolication - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-symbolication
 // 
-// test 4
+// test 5
 if(OS_IOS){
      
     //var CountlyDeviceInfoClass = require('Countly/CountlyDeviceInfo');
