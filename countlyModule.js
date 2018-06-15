@@ -60,7 +60,6 @@
 
 // TO DO recordUncaughtException // waiting for Countly to add to SDK
 // TO DO crashTest - still not sure on how to make non production android crash
-// TO DO ADD GEOLOCTION - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation
 // TO DO ADD Symbolication - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-symbolication
 
 // START IF - iOS / Android - Require Classes needed
@@ -701,27 +700,49 @@ exports.userData = function (userVars){
 
 /**
  * Record User Location - GPS
- * @return     {string}  current countly id for app as used on server
+ * @param     {object}  locationVars   location key value object
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation | iOS GeoLocation} 
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-user-location | Android User location} 
  */ 
-exports.recordLocation = function(){
-     
+// TO DO - ADD OTHER LOCATION SETTINGS LIKE CITY, COUNTRY, IP
+exports.recordLocation = function(locationVars){
+    
+    // set vars
+    var gpsLocation = locationVars.gpsLocation || false;
+
     // START IF - iOS / Android
     if (OS_IOS){
-         
-        // get deviceID
-        var deviceID = CountlyClass.sharedInstance().deviceID();
+        
+        // START IF - gpsLocation
+        if (gpsLocation && gpsLocation.latitude && gpsLocation.longitude){
+            
+            // require CoreLocation
+            var CoreLocation = require('CoreLocation');
+
+            // build CLLocationCoordinate2D
+            var CLLocationCoordinate2D = CoreLocation.CLLocationCoordinate2DMake(gpsLocation.latitude,gpsLocation.longitude);
+            
+            // set location
+            CountlyClass.sharedInstance().recordLocation(CLLocationCoordinate2D);
+
+        };
+        // END IF - gpsLocation      
      
     }else{
-         
-        // get deviceID
-        var deviceID = CountlyClass.sharedInstance().getDeviceID();
-         
+        
+        // START IF - gpsLocation
+        if (gpsLocation && gpsLocation.latitude && gpsLocation.longitude){
+
+            // set gpsLocationString
+            var gpsLocationString = gpsLocation.latitude + "," + gpsLocation.longitude;
+
+            // set location
+            CountlyClass.sharedInstance().setLocation(null,null,gpsLocationString,null);
+
+        };
+        // END IF - gpsLocation
+
     };
     // END IF - iOS / Android
-     
-    // return deviceID
-    return deviceID;
      
 };
