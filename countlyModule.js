@@ -700,7 +700,8 @@ exports.userData = function (userVars){
 
 /**
  * Record User Location - GPS
- * @param     {object}  locationVars   location key value object
+ * @param     {object}  locationVars                location key value object
+ * @param     {object}  locationVars.gpsLocation    gpsLocation key value object with keys latitude and longitude
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation | iOS GeoLocation} 
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-user-location | Android User location} 
  */ 
