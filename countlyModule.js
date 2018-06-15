@@ -58,16 +58,10 @@
  *
  */
 
-
-
-// TO DO ADD CRASH - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting
-// TO DO recordUncaughtException
-// TO DO addCrashLog
-// TO DO recordHandledException
-// TO DO crashTest
+// TO DO recordUncaughtException // waiting for Countly to add to SDK
+// TO DO crashTest - still not sure on how to make non production android crash
 // TO DO ADD GEOLOCTION - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation
 // TO DO ADD Symbolication - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-symbolication
-
 
 // START IF - iOS / Android - Require Classes needed
 if(OS_IOS){
@@ -77,7 +71,7 @@ if(OS_IOS){
      
     // require CountlyConfig
     var CountlyConfigClass = require('Countly/CountlyConfig');
-    var CountlyConfig = new CountlyConfigClass;
+    var CountlyConfig = new CountlyConfigClass();
     
     // require CountlyUserDetailsClass
     var CountlyUserDetailsClass = require('Countly/CountlyUserDetails');
@@ -119,12 +113,16 @@ exports.enableDebug = function(){
  * @param       {string}  configVars.host               countly server url
  * @param       {string}  configVars.iosDeviceID        Optional - Default: CLYIDFV Possible Values: CLYIDFV / CLYIDFA / CLYOpenUDID - @see {@link https://resources.count.ly/v1.0/docs/countly-sdk-for-ios-and-os-x#section-using-a-custom-device-id | Using a Custom Device ID}
  * @param       {string}  configVars.androidDeviceID    Optional - Default: DeviceId.Type.OPEN_UDID Possible Values: DeviceId.Type.OPEN_UDID / DeviceId.Type.ADVERTISING_ID / YOUR-OWN-CUSTOM-ID - @see {@link https://resources.count.ly/v1.0/docs/countly-sdk-for-android#section-setting-up-countly-sdk | Setting up Countly SDK}
+ * @param       {array}   configVars.features           Optional - Array of Features to Enable. Possible Values: CLYCrashReporting / CLYAutoViewTracking (CLYPushNotifications NOT Supported yet) @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-additional-features | iOS Additional Features}
+ * @param       {object}  configVars.crashSegmentation  Optional - crash segmentation key value pair object @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting | iOS Crash Reporting} @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-adding-a-custom-key-value-segment-to-a-crash-report | Android Adding a custom key-value segment to a crash report}
  * 
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-integration | iOS Integration} 
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-setting-up-countly-sdk | Android Setting up Countly SDK} 
  */ 
 exports.start = function(configVars){
      
+    Ti.API.log(JSON.stringify(configVars));
+
     // START IF - iOS / Android
     if(OS_IOS){
  
@@ -134,10 +132,30 @@ exports.start = function(configVars){
          
         // START IF - iosDeviceID set then set CountlyConfig.deviceID
         if(configVars.iosDeviceID){
+
+            // set CountlyConfig.deviceID
             CountlyConfig.deviceID = configVars.iosDeviceID;
         };
         // END IF - iosDeviceID set then set CountlyConfig.deviceID
-         
+        
+        // START IF - features set then enable the features
+        if(configVars.features){
+            
+            // set CountlyConfig.features
+            CountlyConfig.features = [configVars.features];
+
+        };
+        // END IF - features set then enable the features
+        
+        // START IF - crashSegmentation
+        if(configVars.crashSegmentation){
+            
+            // set CountlyConfig.crashSegmentation
+            CountlyConfig.crashSegmentation = configVars.crashSegmentation;
+
+        };
+        // END IF - crashSegmentation
+
         // start countly
         CountlyClass.sharedInstance().startWithConfig(CountlyConfig);
  
@@ -174,7 +192,40 @@ exports.start = function(configVars){
          
         // start countly
         CountlyClass.sharedInstance().onStart(appActivity);
- 
+        
+        // START IF - features set then check values and enable features manually
+        if(configVars.features){
+            
+            // set featuresArray
+            var featuresArray = configVars.features;
+
+            if (featuresArray.indexOf("CLYCrashReporting") > -1) {
+                
+                // enable CrashReporting on countly
+                CountlyClass.sharedInstance().enableCrashReporting();
+
+                // START IF - crashSegmentation
+                if(configVars.crashSegmentation){
+                    
+                    // setCustomCrashSegments
+                    CountlyClass.sharedInstance().setCustomCrashSegments(configVars.crashSegmentation)
+
+                };
+                // END IF - crashSegmentation
+
+            };
+
+            if (featuresArray.indexOf("CLYAutoViewTracking") > -1) {
+                
+                // enable ViewTracking on countly
+                CountlyClass.sharedInstance().setViewTracking(true);
+
+            };
+
+        };
+        // START END - features set then check values and enable features manually
+
+
     };
     // END IF - iOS / Android
  
@@ -205,7 +256,7 @@ exports.resume = function(){
     CountlyClass.sharedInstance().onStart(appActivity);
  
 };
- 
+
 /**
  * Returns Countly Device ID
  * @return     {string}  current countly id for app as used on server
@@ -231,6 +282,148 @@ exports.getDeviceID = function(){
     // return deviceID
     return deviceID;
      
+};
+
+/**
+ * Adds crash log record that will be send with the crash report
+ * 
+ * @param      {string}     crashLogVar                       crash log to store and send with crash
+ *  
+ * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting | iOS Crash Reporting} 
+ * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-adding-breadcrumbs | Android Adding breadcrumbs} 
+ */ 
+exports.recordCrashLog = function(crashLogVars){
+    
+    // set vars
+    var crashLog = crashLogVars;
+
+    // START IF - iOS / Android
+    if (OS_IOS){
+         
+        CountlyClass.sharedInstance().recordCrashLog(crashLog);
+     
+    }else{
+         
+        CountlyClass.sharedInstance().addCrashLog(crashLog);
+         
+    };
+    // END IF - iOS / Android
+     
+};
+
+/**
+ * Records Handled Exception
+ * 
+ * @param      {object}     exceptionData                       exceptionData key value object
+ * @param      {string}     exceptionData.name                  exception type
+ * @param      {string}     exceptionData.reason                exception name
+ * @param      {object}     exceptionData.userInfo              exception userInfo (extra data you want to provide)
+ *  
+ * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-manually-handled-exceptions | iOS Manually Handled Exceptions} 
+ * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-logging-handled-exceptions | Android Logging handled exceptions} 
+ */ 
+exports.recordHandledException = function(exceptionData){
+    
+    // set vars
+    var exceptionName = exceptionData.name;
+    var exceptionReason = exceptionData.reason;
+    var exceptionUserInfo = exceptionData.userInfo;
+
+    // START IF - iOS / Android
+    if (OS_IOS){
+          
+        // require NSException class
+        var NSException = require('Foundation/NSException');
+
+        // build crashException from NSException
+        var crashException = NSException.exceptionWithNameReasonUserInfo(exceptionName, exceptionReason, exceptionUserInfo);
+
+        // build crashStackTraceArray as array of all data in exceptionData
+        var crashStackTraceArray = [];
+
+        // START LOOP - add exceptionData to crashStackTraceArray
+        for (var key in exceptionData) {
+            if (exceptionData.hasOwnProperty(key)) {
+                var arrayValueString = key + ":" + JSON.stringify(exceptionData[key]);
+                crashStackTraceArray.push(arrayValueString);
+            }
+        };
+        // END LOOP - add exceptionData to crashStackTraceArray
+
+        // run recordHandledExceptionWithStackTrace
+        CountlyClass.sharedInstance().recordHandledExceptionWithStackTrace(crashException, crashStackTraceArray);
+     
+    }else{
+         
+        // require Exception and Throwable
+        var Exception = require('java.lang.Exception');
+        var Throwable = require('java.lang.Throwable');
+
+        // build exceptionDataString
+        var exceptionDataString = JSON.stringify(exceptionData);
+
+        // build exceptionTrowable
+        var exceptionTrowable = new Throwable(exceptionDataString);
+
+        // build crashException
+        var crashException = new Exception(exceptionName, exceptionTrowable);
+
+        // run logException - TO DO - change to recordHandledException when pulling in new SDK
+        CountlyClass.sharedInstance().logException(crashException)
+         
+    };
+    // END IF - iOS / Android
+     
+};
+
+// TO DO - add when Countly Adds functions to SDK
+exports.recordUnHandledException = function(exceptionData){
+
+    // USE - Ti.App.addEventListener('uncaughtException', function(exception) {
+    // LOG WHOLE EXCEPTTION AS - crashStackTraceArray
+    // IF THERE IS A FIX FOR NSThread.callStackSymbols the we could use that and push exception as USERINFO?
+    // 
+    //var NSArray = require('Foundation/NSArray');
+    //var NSThread = require('Foundation/NSThread');
+    //var crashStackTrace = NSThread.callStackSymbols;
+    //var crashStackTrace = NSArray.alloc().initWithArray(NSArray.cast(NSThread.callStackSymbols));
+    //Ti.API.log(Object.prototype.toString.call(crashStackTrace));
+    //Ti.API.log(Object.keys(crashStackTrace));
+    //Ti.API.log(Object.values(crashStackTrace));
+    // 
+};
+
+/**
+ * Crash Tests
+ * - iOS crashes on device (even when not in production)
+ * - Android should crash on production
+ */ 
+exports.crashTest = function (){
+    
+    Ti.API.log("Countly - crashTest");
+
+    if(OS_IOS){
+
+        // CRASH ON DEVICE (COMPLETE HARD CRASH)
+        Ti.Media.openPhotoGallery({
+            mediaTypes: [ Titanium.Media.MEDIA_TYPE_PHOTO ]
+        });
+
+        // crash on simulator
+        //var NSException = require('Foundation/NSException');
+        //var crashException = new NSException();
+
+    }else{
+
+        throw new RuntimeException("This is a crash");
+
+        //var test = null;
+        //while(1){
+        //    test = {test};
+        //}
+        
+    }
+
 };
 
 /**
@@ -504,4 +697,31 @@ exports.userData = function (userVars){
 
     };
     // END IF - iOS / Android
+};
+
+/**
+ * Record User Location - GPS
+ * @return     {string}  current countly id for app as used on server
+ * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation | iOS GeoLocation} 
+ * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-user-location | Android User location} 
+ */ 
+exports.recordLocation = function(){
+     
+    // START IF - iOS / Android
+    if (OS_IOS){
+         
+        // get deviceID
+        var deviceID = CountlyClass.sharedInstance().deviceID();
+     
+    }else{
+         
+        // get deviceID
+        var deviceID = CountlyClass.sharedInstance().getDeviceID();
+         
+    };
+    // END IF - iOS / Android
+     
+    // return deviceID
+    return deviceID;
+     
 };
