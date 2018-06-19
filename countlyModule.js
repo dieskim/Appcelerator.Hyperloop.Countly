@@ -61,7 +61,7 @@
 // TO DO recordUncaughtException // waiting for Countly to add to SDK
 // TO DO crashTest - still not sure on how to make non production android crash
 // TO DO ADD Symbolication - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-symbolication
-
+// TO DO - MOVE TO hyperloop modules project on bitbucket 
 // START IF - iOS / Android - Require Classes needed
 if(OS_IOS){
      
@@ -140,8 +140,23 @@ exports.start = function(configVars){
         // START IF - features set then enable the features
         if(configVars.features){
             
+            // require NSArray
+            var NSMutableArray = require('Foundation/NSMutableArray');
+
+            // create new featuresArray
+            var featuresArray = new NSMutableArray();
+
+            // START LOOP - add configVars.features to featuresArray
+            for (var i = 0; i < configVars.features.length; i++) {
+
+                // add feature to featuresArray
+                featuresArray.addObject(configVars.features[i]);
+
+            };
+            // END LOOP - add features to featuresArray 
+
             // set CountlyConfig.features
-            CountlyConfig.features = [configVars.features];
+            CountlyConfig.features = featuresArray;
 
         };
         // END IF - features set then enable the features
@@ -337,23 +352,32 @@ exports.recordHandledException = function(exceptionData){
         // build crashException from NSException
         var crashException = NSException.exceptionWithNameReasonUserInfo(exceptionName, exceptionReason, exceptionUserInfo);
 
-        // build crashStackTraceArray as array of all data in exceptionData
-        var crashStackTraceArray = [];
+         // require NSThread
+        var NSThread = require('Foundation/NSThread');
 
-        // START LOOP - add exceptionData to crashStackTraceArray
-        for (var key in exceptionData) {
-            if (exceptionData.hasOwnProperty(key)) {
-                var arrayValueString = key + ":" + JSON.stringify(exceptionData[key]);
-                crashStackTraceArray.push(arrayValueString);
-            }
+        // require NSArray
+        var NSMutableArray = require('Foundation/NSMutableArray');
+
+        // get NSThread.callStackSymbols
+        var threadStackSymbols = NSThread.callStackSymbols;
+
+        // create crashStackTraceArray
+        var crashStackTraceArray = new NSMutableArray();
+
+        // START LOOP - add threadStackSymbols to crashStackTraceArray 
+        for (var i = 0; i < threadStackSymbols.count; i++) {
+
+                // threadStackSymbol to crashStackTrace array
+                crashStackTraceArray.addObject(threadStackSymbols.objectAtIndex(i));
+
         };
-        // END LOOP - add exceptionData to crashStackTraceArray
+        // END LOOP - add threadStackSymbols to crashStackTraceArray
 
         // run recordHandledExceptionWithStackTrace
         CountlyClass.sharedInstance().recordHandledExceptionWithStackTrace(crashException, crashStackTraceArray);
      
     }else{
-         
+        
         // require Exception and Throwable
         var Exception = require('java.lang.Exception');
         var Throwable = require('java.lang.Throwable');
@@ -376,20 +400,10 @@ exports.recordHandledException = function(exceptionData){
 };
 
 // TO DO - add when Countly Adds functions to SDK
-exports.recordUnHandledException = function(exceptionData){
+exports.recordUnhandledException = function(exceptionData){
 
     // USE - Ti.App.addEventListener('uncaughtException', function(exception) {
-    // LOG WHOLE EXCEPTTION AS - crashStackTraceArray
-    // IF THERE IS A FIX FOR NSThread.callStackSymbols the we could use that and push exception as USERINFO?
-    // 
-    //var NSArray = require('Foundation/NSArray');
-    //var NSThread = require('Foundation/NSThread');
-    //var crashStackTrace = NSThread.callStackSymbols;
-    //var crashStackTrace = NSArray.alloc().initWithArray(NSArray.cast(NSThread.callStackSymbols));
-    //Ti.API.log(Object.prototype.toString.call(crashStackTrace));
-    //Ti.API.log(Object.keys(crashStackTrace));
-    //Ti.API.log(Object.values(crashStackTrace));
-    // 
+
 };
 
 /**
