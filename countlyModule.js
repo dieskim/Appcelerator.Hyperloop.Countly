@@ -206,7 +206,7 @@ if(OS_IOS){
 // END IF - iOS or Android - Require Classes needed
  
 /**
- * Enabled Countl Debug Logging
+ * Enabled Countly Debug Logging - Run before Starting Countly
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-debug-mode | iOS Debug} 
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-enabling-logging | Android Debug} 
  */

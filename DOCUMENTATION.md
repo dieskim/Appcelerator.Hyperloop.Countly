@@ -4,183 +4,183 @@
 countlyModule
 Cross-platform Hyperloop Module for both the iOS and Android Countly SDK
 
-iOS Hyperloop Setup:
-Create "Podfile" with the following in the project root:
+##### iOS: Create "Podfile" with the following in the project root:
+```js
+# This is required for CocoaPods 1.x
+install! 'cocoapods',
+         :integrate_targets => false
+ 
+platform :ios, '8.0'
+use_frameworks!
 
- # This is required for CocoaPods 1.x
-    install! 'cocoapods',
-             :integrate_targets => false
+target 'alloy-hyperloop' do
 
-    platform :ios, '8.0'
-    use_frameworks!
+    pod 'Countly', '18.04'
+    
+end
+``` 
 
-    target 'alloy-hyperloop' do
+##### Android: Create "build.gradle" with the following in the project root:
+```js
+apply plugin: 'java'
+ 
+repositories {
+    google()
+    jcenter()
+}
+ 
+dependencies {
+    implementation 'ly.count.android:sdk:18.04'
+}
+ 
+task getDeps(type: Copy) {
+    from sourceSets.main.runtimeClasspath
+    exclude 'support-*'                                     // The support libraries are packaged with Titanium already
+    into 'app/platform/android/'                            // Use "platform/android/" for Classic or "app/platform/android/" for Alloy
+}
+``` 
 
-        pod 'Countly', '18.04'
-
-    end
-
-Android Setup:
-Create "build.gradle" with the following in the project root:
-
- apply plugin: 'java'
-
-    repositories {
-        google()
-        jcenter()
-    }
-
-    dependencies {
-        implementation 'ly.count.android:sdk:18.04'
-    }
-
-    task getDeps(type: Copy) {
-        from sourceSets.main.runtimeClasspath
-        exclude 'support-*'                                     // The support libraries are packaged with Titanium already
-        into 'app/platform/android/'                            // Use "platform/android/" for Classic or "app/platform/android/" for Alloy
-    }
-
-**Example** *(Require and run an exported function to show the form)*
+**Example**
 ```js
 
  // require Countly
-    var Countly = require('countlyModule/countlyModule');
+var Countly = require('countlyModule/countlyModule');
 
-    // enable debug
-    Countly.enableDebug();
+// enable debug
+Countly.enableDebug();
 
-    // countly start
-    Countly.start({ appKey: "1a0ea80f9fbd222f76ad444414e6fc9da024",             // app key for the countly app
-                    host: "http://yourhost.com",                                // countly server url
-                    //iosDeviceID: "CLYOpenUDID",                               // Optional - Default: CLYIDFV Possible Values: CLYIDFV / CLYIDFA / CLYOpenUDID / yourCustomDeviceID - @see [| Using a Custom Device ID](https://resources.count.ly/v1.0/docs/countly-sdk-for-ios-and-os-x#section-using-a-custom-device-id)
-                    //androidDeviceID: "DeviceId.Type.OPEN_UDID",               // Optional - Default: DeviceId.Type.OPEN_UDID Possible Values: DeviceId.Type.OPEN_UDID / DeviceId.Type.ADVERTISING_ID / YOUR-OWN-CUSTOM-ID - @see [| Setting up Countly SDK](https://resources.count.ly/v1.0/docs/countly-sdk-for-android#section-setting-up-countly-sdk)
-                    //features: ['CLYCrashReporting','CLYAutoViewTracking'],    // Optional - Array of Features to Enable. Possible Values: CLYCrashReporting / CLYAutoViewTracking (CLYPushNotifications NOT Supported yet) @see [| iOS Additional Features](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-additional-features)
-                    //crashSegmentation: {key1: "value1"},                                     // Optional - crash segmentation key value pair object @see [| iOS Crash Reporting](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting) @see [| Android Adding a custom key-value segment to a crash report](https://resources.count.ly/docs/countly-sdk-for-android#section-adding-a-custom-key-value-segment-to-a-crash-report)
+// countly start
+Countly.start({ appKey: "1a0ea80f9fbd222f76ad444414e6fc9da024",             // app key for the countly app
+                host: "http://yourhost.com",                                // countly server url
+                //iosDeviceID: "CLYOpenUDID",                               // Optional - Default: CLYIDFV Possible Values: CLYIDFV / CLYIDFA / CLYOpenUDID / yourCustomDeviceID - @see [| Using a Custom Device ID](https://resources.count.ly/v1.0/docs/countly-sdk-for-ios-and-os-x#section-using-a-custom-device-id)
+                //androidDeviceID: "DeviceId.Type.OPEN_UDID",               // Optional - Default: DeviceId.Type.OPEN_UDID Possible Values: DeviceId.Type.OPEN_UDID / DeviceId.Type.ADVERTISING_ID / YOUR-OWN-CUSTOM-ID - @see [| Setting up Countly SDK](https://resources.count.ly/v1.0/docs/countly-sdk-for-android#section-setting-up-countly-sdk)
+                //features: ['CLYCrashReporting','CLYAutoViewTracking'],    // Optional - Array of Features to Enable. Possible Values: CLYCrashReporting / CLYAutoViewTracking (CLYPushNotifications NOT Supported yet) @see [| iOS Additional Features](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-additional-features)
+                //crashSegmentation: {key1: "value1"},                                     // Optional - crash segmentation key value pair object @see [| iOS Crash Reporting](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting) @see [| Android Adding a custom key-value segment to a crash report](https://resources.count.ly/docs/countly-sdk-for-android#section-adding-a-custom-key-value-segment-to-a-crash-report)
 
-    });
+});
 
-    function getDeviceID(){
+function getDeviceID(){
 
-        Ti.API.log("Countly - getDeviceID");
+    Ti.API.log("Countly - getDeviceID");
 
-        var deviceID = Countly.getDeviceID();
+    var deviceID = Countly.getDeviceID();
 
-        Ti.API.log(deviceID);
+    Ti.API.log(deviceID);
 
-    }
+}
 
-    function sendEvent(){
+function sendEvent(){
 
-        Ti.API.log("Countly - event");
+    Ti.API.log("Countly - event");
 
-        var eventData = {key: "test2", segmentation:{test1: "test1"}, count: 1};
+    var eventData = {key: "test2", segmentation:{test1: "test1"}, count: 1};
 
-        Ti.API.log("Countly - after eventData");
+    Ti.API.log("Countly - after eventData");
 
-        Countly.recordEvent(eventData);
+    Countly.recordEvent(eventData);
 
 
-    }
+}
 
-    function userDetails(){
+function userDetails(){
 
-        Ti.API.log("Countly - userDetails");
+    Ti.API.log("Countly - userDetails");
 
-        // set userData object
-        var userData = {};
-        userData['name'] = 'testName2';
-        userData['email'] = 'testEmail2@gmail.com';
-        userData['username'] = 'testUserName2';
-        userData['birthYear'] = '1983';
+    // set userData object
+    var userData = {};
+    userData['name'] = 'testName2';
+    userData['email'] = 'testEmail2@gmail.com';
+    userData['username'] = 'testUserName2';
+    userData['birthYear'] = '1983';
 
-        // set customUserData object
-        var customUserData = {};
-        customUserData['OUDID'] = "testOUDID";
+    // set customUserData object
+    var customUserData = {};
+    customUserData['OUDID'] = "testOUDID";
 
-        // set args as userData and customUserData
-        var args = {    userData:userData,
-                        customUserData:customUserData,
+    // set args as userData and customUserData
+    var args = {    userData:userData,
+                    customUserData:customUserData,
+                };
+
+    // run Countly.userData
+    Countly.userData(args);
+
+}
+
+function recordHandledException(){
+
+    Ti.API.log("Countly - recordCrashLog");
+
+    Countly.recordCrashLog("This is the log before the Exception");
+
+    Ti.API.log("Countly - recordHandledException");
+
+    // run Countly.crashTest
+    Countly.recordHandledException({name: "exceptionType",
+                                    reason: "exceptionName",
+                                    userInfo: {exceptionUserInfoKey: "exceptionUserInfoValue"}});
+
+}
+
+function recordUnhandledException(){
+
+    Ti.API.log("Countly - recordUnhandledException");
+
+    // run Countly.crashTest
+    Countly.recordUnhandledException({name: "exceptionType",
+                                    reason: "exceptionName",
+                                    userInfo: {exceptionUserInfoKey: "exceptionUserInfoValue"}});
+
+}
+
+function recordLocation(){
+
+    Ti.API.log("Countly - recordLocation");
+
+    // run Countly.crashTest
+    Countly.recordLocation({gpsLocation: {latitude: "33.6895", longitude: "139.6917"}});
+
+}
+
+function crashTest(){
+
+    // run Countly.crashTest
+    Countly.crashTest();
+
+}
+
+// APPCELERATOR ANDROID APP PAUSE RESUME EVENTS
+// USE: https://github.com/dieskim/Appcelerator.Hyperloop.appPauseResume
+
+// require appPauseResumeModule
+var appPauseResume = require('appPauseResume');
+
+// run appPauseResume and add resume and pause callbacks
+appPauseResume({pause: function(){
+
+                    Ti.API.info("appPauseResume - pause");
+
+                    if(OS_ANDROID){
+
+                        // stop countly on app pause
+                        Countly.stop();
                     };
 
-        // run Countly.userData
-        Countly.userData(args);
+                },
+                resume: function(){
 
-    }
+                    Ti.API.info("appPauseResume - resume");
 
-    function recordHandledException(){
+                    if(OS_ANDROID){
 
-        Ti.API.log("Countly - recordCrashLog");
-
-        Countly.recordCrashLog("This is the log before the Exception");
-
-        Ti.API.log("Countly - recordHandledException");
-
-        // run Countly.crashTest
-        Countly.recordHandledException({name: "exceptionType",
-                                        reason: "exceptionName",
-                                        userInfo: {exceptionUserInfoKey: "exceptionUserInfoValue"}});
-
-    }
-
-    function recordUnhandledException(){
-
-        Ti.API.log("Countly - recordUnhandledException");
-
-        // run Countly.crashTest
-        Countly.recordUnhandledException({name: "exceptionType",
-                                        reason: "exceptionName",
-                                        userInfo: {exceptionUserInfoKey: "exceptionUserInfoValue"}});
-
-    }
-
-    function recordLocation(){
-
-        Ti.API.log("Countly - recordLocation");
-
-        // run Countly.crashTest
-        Countly.recordLocation({gpsLocation: {latitude: "33.6895", longitude: "139.6917"}});
-
-    }
-
-    function crashTest(){
-
-        // run Countly.crashTest
-        Countly.crashTest();
-
-    }
-
-    // APPCELERATOR ANDROID APP PAUSE RESUME EVENTS
-    // USE: https://github.com/dieskim/Appcelerator.Hyperloop.appPauseResume
-
-    // require appPauseResumeModule
-    var appPauseResume = require('appPauseResume');
-
-    // run appPauseResume and add resume and pause callbacks
-    appPauseResume({pause: function(){
-
-                        Ti.API.info("appPauseResume - pause");
-
-                        if(OS_ANDROID){
-
-                            // stop countly on app pause
-                            Countly.stop();
-                        };
-
-                    },
-                    resume: function(){
-
-                        Ti.API.info("appPauseResume - resume");
-
-                        if(OS_ANDROID){
-
-                            // resume countly on app pause
-                            Countly.resume();
-                        };
+                        // resume countly on app pause
+                        Countly.resume();
+                    };
 
 
-                    },
-                    setIntervalTime: 1000,  // optional - Default: 1000 miliseconds (1 second)
-    });
+                },
+                setIntervalTime: 1000,  // optional - Default: 1000 miliseconds (1 second)
+});
 ```
 
 * [countlyModule](#module_countlyModule)
@@ -200,9 +200,10 @@ Create "build.gradle" with the following in the project root:
 <a name="module_countlyModule.enableDebug"></a>
 
 ### countlyModule.enableDebug()
-Enabled Countl Debug Logging
+Enabled Countly Debug Logging - Run before Starting Countly
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**
 
 - [| iOS Debug](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-debug-mode)
@@ -214,6 +215,7 @@ Enabled Countl Debug Logging
 Start Countly
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**
 
 - [| iOS Integration](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-integration)
@@ -236,6 +238,7 @@ Start Countly
 Stops Countly Tracking - ANDROID ONLY
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**: [| Android Setting up Countly SDK](https://resources.count.ly/docs/countly-sdk-for-android#section-setting-up-countly-sdk)
 <a name="module_countlyModule.resume"></a>
 
@@ -243,6 +246,7 @@ Stops Countly Tracking - ANDROID ONLY
 Resume Countly Tracking - ANDROID ONLY
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**: [| Android Setting up Countly SDK](https://resources.count.ly/docs/countly-sdk-for-android#section-setting-up-countly-sdk)
 <a name="module_countlyModule.getDeviceID"></a>
 
@@ -250,7 +254,9 @@ Resume Countly Tracking - ANDROID ONLY
 Returns Countly Device ID
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **Returns**: <code>string</code> - current countly id for app as used on server
+
 **See**
 
 - [| iOS Device ID](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-device-id)
@@ -262,6 +268,7 @@ Returns Countly Device ID
 Adds crash log record that will be send with the crash report
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**
 
 - [| iOS Crash Reporting](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting)
@@ -278,6 +285,7 @@ Adds crash log record that will be send with the crash report
 Records Handled Exception
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**
 
 - [| iOS Manually Handled Exceptions](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-manually-handled-exceptions)
@@ -297,6 +305,7 @@ Records Handled Exception
 Records Unandled Exception
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **Todo**
 
 - [ ] add when Countly Adds functions to SDK
@@ -309,6 +318,7 @@ Crash Tests
 - Android should crash on production
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **Todo**
 
 - [ ] add android dev crash - still not sure on how to make non production android crash
@@ -319,6 +329,7 @@ Crash Tests
 Record an Event to Countly
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**
 
 - [| iOS Recording Events](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-recording-events)
@@ -344,6 +355,7 @@ Record an Event to Countly
 Set and Send UserData to Countly
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**
 
 - [| iOS User Profiles](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-user-profiles)
@@ -362,6 +374,7 @@ Set and Send UserData to Countly
 Record User Location - GPS
 
 **Kind**: static method of [<code>countlyModule</code>](#module_countlyModule)
+
 **See**
 
 - [| iOS GeoLocation](https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation)
