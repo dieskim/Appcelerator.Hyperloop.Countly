@@ -49,19 +49,141 @@
     Countly.enableDebug();
      
     // countly start
-    Countly.start({ appKey: "1a0ea80f9fbd222f76ad444414e6fc9da024",         // appKey
-                    host: "http://host.com",                                // countly server host
-                    iosDeviceID: "CLYOpenUDID",                             // Optional - Defaults to: CLYIDFV - https://resources.count.ly/v1.0/docs/countly-sdk-for-ios-and-os-x#section-using-a-custom-device-id
-                    //androidDeviceID: "DeviceId.Type.OPEN_UDID",           // Optional - Defaults to: DeviceId.Type.OPEN_UDID else DeviceId.Type.ADVERTISING_ID / YOUR-OWN-CUSTOM-ID - https://resources.count.ly/v1.0/docs/countly-sdk-for-android#section-setting-up-countly-sdk
+    Countly.start({ appKey: "1a0ea80f9fbd222f76ad444414e6fc9da024",             // app key for the countly app
+                    host: "http://yourhost.com",                                // countly server url
+                    //iosDeviceID: "CLYOpenUDID",                               // Optional - Default: CLYIDFV Possible Values: CLYIDFV / CLYIDFA / CLYOpenUDID / yourCustomDeviceID - @see {@link https://resources.count.ly/v1.0/docs/countly-sdk-for-ios-and-os-x#section-using-a-custom-device-id | Using a Custom Device ID}
+                    //androidDeviceID: "DeviceId.Type.OPEN_UDID",               // Optional - Default: DeviceId.Type.OPEN_UDID Possible Values: DeviceId.Type.OPEN_UDID / DeviceId.Type.ADVERTISING_ID / YOUR-OWN-CUSTOM-ID - @see {@link https://resources.count.ly/v1.0/docs/countly-sdk-for-android#section-setting-up-countly-sdk | Setting up Countly SDK}
+                    //features: ['CLYCrashReporting','CLYAutoViewTracking'],    // Optional - Array of Features to Enable. Possible Values: CLYCrashReporting / CLYAutoViewTracking (CLYPushNotifications NOT Supported yet) @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-additional-features | iOS Additional Features}
+                    //crashSegmentation: {key1: "value1"},                                     // Optional - crash segmentation key value pair object @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting | iOS Crash Reporting} @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-adding-a-custom-key-value-segment-to-a-crash-report | Android Adding a custom key-value segment to a crash report}
      
-    });    
+    });
+
+    function getDeviceID(){
+     
+        Ti.API.log("Countly - getDeviceID");
+         
+        var deviceID = Countly.getDeviceID();
+         
+        Ti.API.log(deviceID);
+     
+    }
+     
+    function sendEvent(){
+         
+        Ti.API.log("Countly - event");
+         
+        var eventData = {key: "test2", segmentation:{test1: "test1"}, count: 1};
+         
+        Ti.API.log("Countly - after eventData");
+     
+        Countly.recordEvent(eventData);
+         
+         
+    }
+     
+    function userDetails(){
+         
+        Ti.API.log("Countly - userDetails");
+         
+        // set userData object
+        var userData = {};
+        userData['name'] = 'testName2';
+        userData['email'] = 'testEmail2@gmail.com';
+        userData['username'] = 'testUserName2';
+        userData['birthYear'] = '1983';
+        
+        // set customUserData object
+        var customUserData = {};
+        customUserData['OUDID'] = "testOUDID";
+
+        // set args as userData and customUserData
+        var args = {    userData:userData,
+                        customUserData:customUserData,
+                    };
+                                
+        // run Countly.userData
+        Countly.userData(args); 
+         
+    }
+
+    function recordHandledException(){
+        
+        Ti.API.log("Countly - recordCrashLog");
+
+        Countly.recordCrashLog("This is the log before the Exception");
+
+        Ti.API.log("Countly - recordHandledException");
+        
+        // run Countly.crashTest
+        Countly.recordHandledException({name: "exceptionType", 
+                                        reason: "exceptionName",
+                                        userInfo: {exceptionUserInfoKey: "exceptionUserInfoValue"}}); 
+        
+    }
+
+    function recordUnhandledException(){
+        
+        Ti.API.log("Countly - recordUnhandledException");
+        
+        // run Countly.crashTest
+        Countly.recordUnhandledException({name: "exceptionType", 
+                                        reason: "exceptionName",
+                                        userInfo: {exceptionUserInfoKey: "exceptionUserInfoValue"}}); 
+        
+    }
+
+    function recordLocation(){
+         
+        Ti.API.log("Countly - recordLocation");
+
+        // run Countly.crashTest
+        Countly.recordLocation({gpsLocation: {latitude: "33.6895", longitude: "139.6917"}}); 
+
+    }
+
+    function crashTest(){
+         
+        // run Countly.crashTest
+        Countly.crashTest(); 
+
+    }
+     
+    // APPCELERATOR ANDROID APP PAUSE RESUME EVENTS
+    // USE: https://github.com/dieskim/Appcelerator.Hyperloop.appPauseResume
+
+    // require appPauseResumeModule
+    var appPauseResume = require('appPauseResume');
+
+    // run appPauseResume and add resume and pause callbacks
+    appPauseResume({pause: function(){
+
+                        Ti.API.info("appPauseResume - pause");
+
+                        if(OS_ANDROID){
+
+                            // stop countly on app pause
+                            Countly.stop();
+                        };
+
+                    },
+                    resume: function(){
+
+                        Ti.API.info("appPauseResume - resume");
+
+                        if(OS_ANDROID){
+
+                            // resume countly on app pause
+                            Countly.resume();
+                        };
+                       
+
+                    },
+                    setIntervalTime: 1000,  // optional - Default: 1000 miliseconds (1 second) 
+    });
+
  *
  */
 
-// TO DO recordUncaughtException // waiting for Countly to add to SDK
-// TO DO crashTest - still not sure on how to make non production android crash
-// TO DO ADD Symbolication - https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-symbolication
-// TO DO - MOVE TO hyperloop modules project on bitbucket 
 // START IF - iOS / Android - Require Classes needed
 if(OS_IOS){
      
@@ -110,7 +232,7 @@ exports.enableDebug = function(){
  * @param       {object}  configVars                    countly startup config vars
  * @param       {string}  configVars.appKey             app key for the countly app
  * @param       {string}  configVars.host               countly server url
- * @param       {string}  configVars.iosDeviceID        Optional - Default: CLYIDFV Possible Values: CLYIDFV / CLYIDFA / CLYOpenUDID - @see {@link https://resources.count.ly/v1.0/docs/countly-sdk-for-ios-and-os-x#section-using-a-custom-device-id | Using a Custom Device ID}
+ * @param       {string}  configVars.iosDeviceID        Optional - Default: CLYIDFV Possible Values: CLYIDFV / CLYIDFA / CLYOpenUDID / yourCustomDeviceID - @see {@link https://resources.count.ly/v1.0/docs/countly-sdk-for-ios-and-os-x#section-using-a-custom-device-id | Using a Custom Device ID}
  * @param       {string}  configVars.androidDeviceID    Optional - Default: DeviceId.Type.OPEN_UDID Possible Values: DeviceId.Type.OPEN_UDID / DeviceId.Type.ADVERTISING_ID / YOUR-OWN-CUSTOM-ID - @see {@link https://resources.count.ly/v1.0/docs/countly-sdk-for-android#section-setting-up-countly-sdk | Setting up Countly SDK}
  * @param       {array}   configVars.features           Optional - Array of Features to Enable. Possible Values: CLYCrashReporting / CLYAutoViewTracking (CLYPushNotifications NOT Supported yet) @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-additional-features | iOS Additional Features}
  * @param       {object}  configVars.crashSegmentation  Optional - crash segmentation key value pair object @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-crash-reporting | iOS Crash Reporting} @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-adding-a-custom-key-value-segment-to-a-crash-report | Android Adding a custom key-value segment to a crash report}
@@ -399,7 +521,11 @@ exports.recordHandledException = function(exceptionData){
      
 };
 
-// TO DO - add when Countly Adds functions to SDK
+/**
+ * Records Unandled Exception
+ * 
+ * @todo       add when Countly Adds functions to SDK
+ */
 exports.recordUnhandledException = function(exceptionData){
 
     // USE - Ti.App.addEventListener('uncaughtException', function(exception) {
@@ -410,6 +536,8 @@ exports.recordUnhandledException = function(exceptionData){
  * Crash Tests
  * - iOS crashes on device (even when not in production)
  * - Android should crash on production
+ * 
+ * @todo       add android dev crash - still not sure on how to make non production android crash
  */ 
 exports.crashTest = function (){
     
@@ -448,10 +576,11 @@ exports.crashTest = function (){
  * @param      {integer}    eventVars.count                 event count
  * @param      {double}     eventVars.sum                   event sum
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-recording-events | iOS Recording Events} 
- * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-setting-up-custom-events | Android Setting up custom events}  
+ * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-setting-up-custom-events | Android Setting up custom events}
+ * 
+ * @todo       add duration
+ * @todo       add timed events https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-timed-events 
  */
-// TO DO - add duration  
-// TO DO - add timed events https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-timed-events
 exports.recordEvent = function(eventVars){
 
     // set vars
@@ -718,8 +847,9 @@ exports.userData = function (userVars){
  * @param     {object}  locationVars.gpsLocation    gpsLocation key value object with keys latitude and longitude
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-ios-and-os-x#section-geolocation | iOS GeoLocation} 
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-user-location | Android User location} 
+ * 
+ * @todo       ADD OTHER LOCATION SETTINGS LIKE CITY, COUNTRY, IP 
  */ 
-// TO DO - ADD OTHER LOCATION SETTINGS LIKE CITY, COUNTRY, IP
 exports.recordLocation = function(locationVars){
     
     // set vars
