@@ -1,20 +1,20 @@
 # Appcelerator Hyperloop Count.ly Analytics Module
 Cross-platform Appcelerator Hyperloop Module for Count.ly Analytics - iOS and Android
 
-Countly:
-- [Countly (Countly)](https://count.ly)
+[Countly (Countly)](https://count.ly)
 
 ## This Appcelerator Hyperloop module is a workd in progress and does not currently support all of Count.ly functions.
 ### Please log issues via Github issues
 ### Any pull requests and suggestions welcome!
 ### Author: Dieskim of (Kiteplans.info)](https://www.kiteplans.info)
 
+
 ## Installation:
 
 1. Git Clone or Download and Copy the countlyModule.js file to your `lib/` (Alloy) or your Resources (Classic) directory
 2. Require Count.ly Native SDK via Podfile (iOS) or Gradle (Android)
 
-### iOS: Create "Podfile" with the following in the project root:
+##### iOS: Create "Podfile" with the following in the project root:
 ```js
 # This is required for CocoaPods 1.x
 install! 'cocoapods',
@@ -30,7 +30,7 @@ target 'alloy-hyperloop' do
 end
 ``` 
 
-### Android: Create "build.gradle" with the following in the project root:
+##### Android: Create "build.gradle" with the following in the project root:
 ```js
 apply plugin: 'java'
  
@@ -52,9 +52,10 @@ task getDeps(type: Copy) {
 
 3. Add Example code to your app
 
+##### Example Usage Code:
 ```js
 // require Countly
-    var Countly = require('countlyModule/countlyModule');
+    var Countly = require('countlyModule');
 
     // enable debug
     Countly.enableDebug();
@@ -196,6 +197,11 @@ task getDeps(type: Copy) {
 ``` 
 
 4. Edit Example code, Build and Enjoy!
+
+## Usage:
+
+
+
 
 ## License
 MIT
