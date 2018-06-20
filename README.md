@@ -8,6 +8,7 @@ Cross-platform Appcelerator Hyperloop Module for Count.ly Analytics - iOS and An
 ### Any pull requests and suggestions welcome!
 ### Author: Dieskim of (Kiteplans.info)](https://www.kiteplans.info)
 
+## [DOCUMENTATION (DOCUMENTATION)](https://github.com/dieskim/Appcelerator.Hyperloop.Countly/blob/master/DOCUMENTATION.md)
 
 ## Installation:
 
