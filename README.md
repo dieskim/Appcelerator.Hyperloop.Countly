@@ -1,14 +1,10 @@
 # Appcelerator Hyperloop Count.ly Analytics Module
-Cross-platform Appcelerator Hyperloop Module for Count.ly Analytics - iOS and Android
-
-[Countly (Countly)](https://count.ly)
+Cross-platform Appcelerator Hyperloop Module for [Count.ly Analytics](https://count.ly) - iOS and Android
 
 ## This Appcelerator Hyperloop module is a workd in progress and does not currently support all of Count.ly functions.
 ### Please log issues via Github issues
 ### Any pull requests and suggestions welcome!
 ### Author: Dieskim of (Kiteplans.info)](https://www.kiteplans.info)
-
-## [DOCUMENTATION (DOCUMENTATION)](https://github.com/dieskim/Appcelerator.Hyperloop.Countly/blob/master/DOCUMENTATION.md)
 
 ## Installation:
 
@@ -200,9 +196,7 @@ task getDeps(type: Copy) {
 4. Edit Example code, Build and Enjoy!
 
 ## Usage:
-
-
-
+## [SEE DOCUMENTATION](https://github.com/dieskim/Appcelerator.Hyperloop.Countly/blob/master/DOCUMENTATION.md)
 
 ## License
 MIT
