@@ -1,6 +1,0 @@
-<Alloy>
-	<View id="audioView">
-		<View id="audioPlayer">
-		</View>
-	</View>	
-</Alloy>

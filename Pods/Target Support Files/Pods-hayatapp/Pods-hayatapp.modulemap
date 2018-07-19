@@ -1,6 +1,0 @@
-framework module Pods_hayatapp {
-  umbrella header "Pods-hayatapp-umbrella.h"
-
-  export *
-  module * { export * }
-}

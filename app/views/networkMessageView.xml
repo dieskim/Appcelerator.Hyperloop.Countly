@@ -1,5 +1,0 @@
-<Alloy>
-	<View id="networkMessageView">
-		<Label id="networkMessageLabel"></Label>
-	</View>	
-</Alloy>

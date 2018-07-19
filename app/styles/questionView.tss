@@ -1,7 +1,0 @@
-"#QuestionScrollBox":{
-width: Ti.UI.FILL,
-backgroundColor: "#e0d9c2",
-}
-"#topLabel": {
-	text: L("questions"),
-}
