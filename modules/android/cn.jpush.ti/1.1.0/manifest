@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.1.0
+apiversion: 3
+architectures: armeabi-v7a x86
+description: cn-jpush-ti-android
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2016 by Your Company
+
+# these should not be edited
+name: cn-jpush-ti-android
+moduleid: cn.jpush.ti
+guid: 0fb045a0-2642-4ef6-8ded-0433ce1f660e
+platform: android
+minsdk: 6.1.2.GA

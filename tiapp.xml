@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">XFA2iJNnMD8ltlqNcYA3RlHp9XpqoGrw</property>
+    <property name="acs-oauth-key-production" type="string">ooDP3N4bs6eHsDNO7NuYaoH53x52MMWR</property>
+    <property name="acs-api-key-production" type="string">DaNya2fY8Ljb8RWiDxvXEGhVTTEcfD3S</property>
+    <property name="acs-oauth-secret-development" type="string">38sl69GRCH3Rl7Xi0N5hgAsoqpHDaozo</property>
+    <property name="acs-oauth-key-development" type="string">STxPyOBtxWfSGacVc3S0hLoPdLy21SF0</property>
+    <property name="acs-api-key-development" type="string">J2vDGVaj8E0AZlxYDyZYYUrcBOKHAWFU</property>
+    <property name="ti.android.fastdev" type="bool">false</property>
+    <property name="ti.android.bug2373.finishfalseroot" type="bool">true</property>
+    <id>com.hayatnuri.app</id>
+    <name>hayatapp</name>
+    <version>3.1.0</version>
+    <publisher>Hayatnuri</publisher>
+    <url>http://www.hayatnuri.org</url>
+    <description>not specified</description>
+    <copyright>2016 © Hayatnuri</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>true</navbar-hidden>
+    <analytics>false</analytics>
+    <guid>4c6ea6ae-a596-4878-9999-364e60f97f8e</guid>
+    <property name="ti.ui.defaultunit" type="string">system</property>
+    <property name="run-on-main-thread" type="bool">true</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UIBackgroundModes</key>
+                <array>
+                    <string>audio</string>
+                </array>
+                <key>NSLocationWhenInUseUsageDescription</key>
+                <string>帮助你找到身边其他的APP用户</string>
+                <key>NSPhotoLibraryUsageDescription</key>
+                <string>分享APP功能</string>
+                <key>NSMicrophoneUsageDescription</key>
+                <string>联系我们功能</string>
+                <key>NSAppleMusicUsageDescription</key>
+                <string>分享APP功能</string>
+            </dict>
+        </plist>
+    </ios>
+    <!-- <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+    </iphone>-->
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- SET ANDROID VERSION CODE AND NAME HERE -->
+        <manifest android:installLocation="auto" android:versionCode="5"
+            android:versionName="3.1.0" package="com.hayatnuri.app" xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- START SET TARGETSDK - Android 5.0 Notification Icon Fix 
+            <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="20"/> -->
+            <!-- START - Default application -->
+            <application android:debuggable="false"
+                android:icon="@drawable/appicon"
+                android:label="@string/app_name"
+                android:name="HayatappApplication" android:theme="@style/Theme.NoActionBar">
+                <!-- START - Android App Name and Splash Portrait-->
+                <activity android:alwaysRetainTaskState="true"
+                    android:configChanges="keyboardHidden"
+                    android:label="@string/app_name" android:name=".HayatappActivity">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN"/>
+                        <category android:name="android.intent.category.LAUNCHER"/>
+                    </intent-filter>
+                </activity>
+                <!-- END - Android App Name and Splash Portrait-->
+                <!-- START - Countly INSTALL REFERRER-->
+                <receiver android:name="ly.count.android.sdk.ReferrerReceiver" android:exported="true">
+                    <intent-filter>
+                        <action android:name="com.android.vending.INSTALL_REFERRER" />
+                    </intent-filter>
+                </receiver>
+                <!-- END - Countly INSTALL REFERRER-->
+            </application>
+            <!-- END - Default application -->
+        </manifest>
+    </android>
+    <modules>
+        <module platform="android">hyperloop</module>
+        <module platform="iphone">hyperloop</module>
+        <module platform="iphone">cn.jpush.ti</module>
+        <module platform="android">cn.jpush.ti</module>
+        <module platform="iphone">dk.napp.drawer</module>
+        <module platform="android">com.tripvi.drawerlayout</module>
+        <!-- TO MOVE TO HYPERLOOP -->
+        <module platform="iphone">net.hoyohoyo.tiremotecontrol</module>    
+    </modules>
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+    </deployment-targets>
+    <sdk-version>7.2.0.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
+    <property name="ti.deploytype">test</property>
+    <property name="appc-app-id" type="string">56208f3d94ad6408124ee6b8</property>
+    <property name="android.javac.maxmemory" type="string">4096M</property>
+    <property name="android.dx.maxmemory" type="string">8192M</property>
+</ti:app>

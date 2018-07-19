@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>lib/scheduleNotifications/scheduleNotifications.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-activityLoader.html">activityLoader</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-activityLoader.html#~createActivityLoader">createActivityLoader</a></li></ul></li><li><a href="module-alertFormOpenClose.html">alertFormOpenClose</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-alertFormOpenClose.html#~alertFormOpenClose">alertFormOpenClose</a></li><li data-type='method' style='display: none;'><a href="module-alertFormOpenClose.html#~shouldAlertFormBeOnTop">shouldAlertFormBeOnTop</a></li></ul></li><li><a href="module-appPauseResume.html">appPauseResume</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-appPauseResume.html#~appPauseResume">appPauseResume</a></li><li data-type='method' style='display: none;'><a href="module-appPauseResume.html#~isInForegroundCheck">isInForegroundCheck</a></li></ul></li><li><a href="module-checkCountlyURL.html">checkCountlyURL</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkCountlyURL.html#.checkURL">checkURL</a></li><li data-type='method' style='display: none;'><a href="module-checkCountlyURL.html#.getURL">getURL</a></li></ul></li><li><a href="module-checkDownloadURL.html">checkDownloadURL</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-checkDownloadURL.html#.checkDownloadURL">checkDownloadURL</a></li><li data-type='member' style='display: none;'><a href="module-checkDownloadURL.html#.requestStoragePermissions">requestStoragePermissions</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~downloadURL">downloadURL</a></li><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~logStorageError">logStorageError</a></li><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~openSettings">openSettings</a></li></ul></li><li><a href="module-checkEnableFeatures.html">checkEnableFeatures</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#.checkEnableXML">checkEnableXML</a></li><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#.enableDisable">enableDisable</a></li><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#~setiOSDateEnable">setiOSDateEnable</a></li></ul></li><li><a href="module-countlyModule.html">countlyModule</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.crashTest">crashTest</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.enableDebug">enableDebug</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.getDeviceID">getDeviceID</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordCrashLog">recordCrashLog</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordEvent">recordEvent</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordHandledException">recordHandledException</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordLocation">recordLocation</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordUnhandledException">recordUnhandledException</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.resume">resume</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.start">start</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.stop">stop</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.userData">userData</a></li></ul></li><li><a href="module-crmSendData.html">crmSendData</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmCreateUpdate">crmCreateUpdate</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmLogin">crmLogin</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSearch">crmSearch</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSendData">crmSendData</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSendTask">crmSendTask</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~getSetCRMUserData">getSetCRMUserData</a></li></ul></li><li><a href="module-customForm.html">customForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-customForm.html#.show">show</a></li></ul></li><li><a href="module-getSetFontSize.html">getSetFontSize</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-getSetFontSize.html#~getSetFontSize">getSetFontSize</a></li></ul></li><li><a href="module-locationData.html">locationData</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-locationData.html#.getCurrentLocation">getCurrentLocation</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#.getLocationData">getLocationData</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#~getLocationNow">getLocationNow</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#~logLocationError">logLocationError</a></li></ul></li><li><a href="module-navigationOpenClose.html">navigationOpenClose</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.closeNavigationView">closeNavigationView</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.navigationGoHome">navigationGoHome</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.navigationUpdateData">navigationUpdateData</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.openNavigationView">openNavigationView</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#~navigationOpenCloseView">navigationOpenCloseView</a></li></ul></li><li><a href="module-openLastOpenView.html">openLastOpenView</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-openLastOpenView.html#~openLastOpenView">openLastOpenView</a></li></ul></li><li><a href="module-pushAlert.html">pushAlert</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pushAlert.html#.pushAlert">pushAlert</a></li><li data-type='method' style='display: none;'><a href="module-pushAlert.html#.showPushXML">showPushXML</a></li><li data-type='method' style='display: none;'><a href="module-pushAlert.html#~pushPopUp">pushPopUp</a></li></ul></li><li><a href="module-reviewDialog.html">reviewDialog</a></li><li><a href="module-scheduleNotifications.html">scheduleNotifications</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#.scheduleLocalNotification">scheduleLocalNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~comeBackToAppNotification">comeBackToAppNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleNotification">scheduleNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleQODNotification">scheduleQODNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleVODNotification">scheduleVODNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~subscribeToNotifactions">subscribeToNotifactions</a></li></ul></li><li><a href="module-sendForm.html">sendForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-sendForm.html#~removeFirstFormFromArray">removeFirstFormFromArray</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~sendFormsFunction">sendFormsFunction</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~storeFormsToSend">storeFormsToSend</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~submitAllForms">submitAllForms</a></li></ul></li><li><a href="module-showFeedbackForm.html">showFeedbackForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~inputArrayItemValue">inputArrayItemValue</a></li><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~sendForm">sendForm</a></li><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~showFeedbackForm">showFeedbackForm</a></li></ul></li><li><a href="module-showForms.html">showForms</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-showForms.html#.showShare">showShare</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadBasic">booksReadBasic</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadComplete">booksReadComplete</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadHalf">booksReadHalf</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.selectedReadingReadComplete">selectedReadingReadComplete</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.showAppHighUsageForm">showAppHighUsageForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.showContact">showContact</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~shareRequestForm">shareRequestForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showBooksReadBasicForm">showBooksReadBasicForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showBooksReadCompleteForm">showBooksReadCompleteForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showSelectedReadingReadCompleteForm">showSelectedReadingReadCompleteForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showShareFunction">showShareFunction</a></li></ul></li><li><a href="module-subscribeForm.html">subscribeForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-subscribeForm.html#~subscribeForm">subscribeForm</a></li></ul></li><li><a href="module-updateApp.html">updateApp</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-updateApp.html#~downloadAlert">downloadAlert</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~downloadUpdate">downloadUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~installAppUpdate">installAppUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~showAndroidNotification">showAndroidNotification</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~updateApp">updateApp</a></li></ul></li><li><a href="module-updateCheck.html">updateCheck</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~appVersionCompare">appVersionCompare</a></li><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~checkUpdate">checkUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~showUpdateForm">showUpdateForm</a></li></ul></li><li><a href="module-vodPrepare.html">vodPrepare</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-vodPrepare.html#.vodDataTextPrepare">vodDataTextPrepare</a></li><li data-type='method' style='display: none;'><a href="module-vodPrepare.html#~vodDataPrepare">vodDataPrepare</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="global.html#event:app:showAlertMessage">app:showAlertMessage</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Alloy.Globals.AnalyticsDeviceID">Alloy.Globals.AnalyticsDeviceID</a></li><li><a href="global.html#Alloy.Globals.AnalyticsEvent">Alloy.Globals.AnalyticsEvent</a></li><li><a href="global.html#Alloy.Globals.AnalyticsRecordLocation">Alloy.Globals.AnalyticsRecordLocation</a></li><li><a href="global.html#Alloy.Globals.bibleDBTextGenerate">Alloy.Globals.bibleDBTextGenerate</a></li><li><a href="global.html#Alloy.Globals.databaseData">Alloy.Globals.databaseData</a></li><li><a href="global.html#Alloy.Globals.defaultComeBackNotificationDays">Alloy.Globals.defaultComeBackNotificationDays</a></li><li><a href="global.html#Alloy.Globals.defaultNotificationDays">Alloy.Globals.defaultNotificationDays</a></li><li><a href="global.html#Alloy.Globals.defaultNotificationSubscriptions">Alloy.Globals.defaultNotificationSubscriptions</a></li><li><a href="global.html#Alloy.Globals.enableDateDelayedFunctions">Alloy.Globals.enableDateDelayedFunctions</a></li><li><a href="global.html#Alloy.Globals.enableFeaturesDateIOS">Alloy.Globals.enableFeaturesDateIOS</a></li><li><a href="global.html#Alloy.Globals.locationDefault">Alloy.Globals.locationDefault</a></li><li><a href="global.html#Alloy.Globals.openAlertForm">Alloy.Globals.openAlertForm</a></li><li><a href="global.html#Alloy.Globals.openAlertFormArray">Alloy.Globals.openAlertFormArray</a></li><li><a href="global.html#Alloy.Globals.openWindow">Alloy.Globals.openWindow</a></li><li><a href="global.html#Alloy.Globals.qodNotificationTime">Alloy.Globals.qodNotificationTime</a></li><li><a href="global.html#Alloy.Globals.storageDevice">Alloy.Globals.storageDevice</a></li><li><a href="global.html#Alloy.Globals.vodNotificationTime">Alloy.Globals.vodNotificationTime</a></li><li><a href="global.html#databaseUpdateAlert">databaseUpdateAlert</a></li><li><a href="global.html#downloadUpdateDatabases">downloadUpdateDatabases</a></li><li><a href="global.html#updateDatabases">updateDatabases</a></li><li><a href="global.html#VirtualScroller">VirtualScroller</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/scheduleNotifications/scheduleNotifications.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * scheduleNotifications
+ * - scheduleLocalNotification schedules local notifcaitons spesified
+ * 
+ * Alloy.Globals: 
+ * - {@link Alloy.Globals.defaultNotificationSubscriptions Alloy.Globals.defaultNotificationSubscriptions}
+ * - {@link Alloy.Globals.defaultNotificationDays Alloy.Globals.defaultNotificationDays}
+ * - {@link Alloy.Globals.vodNotificationTime Alloy.Globals.vodNotificationTime}
+ * - {@link Alloy.Globals.qodNotificationTime Alloy.Globals.qodNotificationTime}
+ * - {@link Alloy.Globals.defaultComeBackNotificationDays Alloy.Globals.defaultComeBackNotificationDays}
+ * 
+ * @requires vodPrepare
+ * @requires qodPrepare
+ * @module scheduleNotifications
+ * @example    &lt;caption>Require and run scheduleLocalNotification to schedule local nofications&lt;/caption>
+ * 
+ * // require scheduleNotification module
+		var scheduleNotifications = require('scheduleNotifications');
+		
+		// run scheduleLocalNotificaiton with subscribeData	
+		scheduleNotifications.scheduleLocalNotification(subscribeData);
+ * 
+ */
+
+/**
+ * comeBackID / VODStartID / QODStartID
+ * - default vars to notifation ids
+ */
+ var comeBackID = 1;					// comeBack notification ID
+ var VODStartID = 10;					// vod notification IDs will be 10 -> 16
+ var QODStartID = 20;					// qod notification IDs will be 20 -> 26
+			
+/**
+ * schedules local nofications
+ *
+ * @param      {object}  subscribeToNotifactionsData  The subscribe to notifactions data
+ * @return     {function}  - function that can be run to schedule local notifcations
+ */
+exports.scheduleLocalNotification = function (subscribeToNotifactionsData){
+	
+	// START IF - iOS/Android cancel all old notifications
+	if(OS_IOS){
+		
+		// cancel all localNotifcations and clear appBadge
+		Ti.App.iOS.cancelAllLocalNotifications();
+		Ti.UI.iOS.setAppBadge(0);
+	
+	}else{
+		
+		// cancel all localNotifcations - one for JPush and one for notification manager
+		Titanium.Android.NotificationManager.cancelAll();
+		JPush.clearLocalNotifications();			
+		
+	};
+	// END IF - iOS/Android cancel all old notifications
+	
+	// first run subscribeToNotifactions
+	subscribeToNotifactions(subscribeToNotifactionsData);
+
+	// set defaultSubscriptionData
+	var defaultSubscriptionData = Alloy.Globals.defaultNotificationSubscriptions;
+	
+	// Get Ti.App.Properties - subscriptionDataArray
+	var subscriptionDataArray = JSON.parse(Ti.App.Properties.getString("subscriptionData",'false'));
+				
+	// START IF - subscriptionData true then schedule notifications that need scheduling
+	if(subscriptionDataArray){
+		
+		// START Loop - through defaultSubscriptionData
+		for (var t=0; t&lt;defaultSubscriptionData.length; t++){
+			
+			// set notificationName
+			var defaultNotificationName = defaultSubscriptionData[t];
+			
+			// START IF - defaultNotificationName in subscriptionDataArray schedule
+			if (subscriptionDataArray.indexOf(defaultNotificationName) > -1){
+				
+				// schedule notifications for defaultNotificationName
+				scheduleNotification(defaultNotificationName);
+				
+			};
+			// END IF - defaultNotificationName in subscriptionDataArray schedule
+			
+		};
+		// END Loop - through subscribeData
+		
+	};
+	// END IF - subscriptionData true then schedule notifications that need scheduling
+
+	// if not in cancel all to make sure they are gone - as in test.js desktop
+	
+	
+};
+
+/**
+ * subscribeToNotifactions to subscribe to notifcations
+ *
+ * @param      {object}  subscribeData  The notifcations to subscribe to data
+ * @param      {string} subscribeData.notificationName notifcation name
+ * @param      {boolean} subscribeData.notificationSubscribeValue notfication subscribe true / false
+ */
+function subscribeToNotifactions(subscribeData){
+	
+	// Get Ti.App.Properties - subscriptionData
+	var currentSubscriptionData = JSON.parse(Ti.App.Properties.getString("subscriptionData",'false'));
+	
+	// START IF - currentSubscriptionData not false update - else set for first time to defaults 
+	if(currentSubscriptionData){
+		
+		// START IF - subscribeData set then update subscriptionData else do nothing
+		if(subscribeData){
+			
+			// START Loop - through subscribeData
+			for (var t=0; t&lt;subscribeData.length; t++){
+				
+				// set vars
+				var notificationName = subscribeData[t].notificationName;
+				var notificationSubscribeValue = subscribeData[t].notificationSubscribeValue;
+					
+				// START IF - if notificationSubscribeValue true(1) and not if currentSubscriptionData then add or check to remove
+				if (notificationSubscribeValue &amp;&amp; currentSubscriptionData.indexOf(notificationName) == -1){
+									
+					// add to subscriptionData
+					currentSubscriptionData.push(notificationName);
+					
+				}else if (!notificationSubscribeValue &amp;&amp; currentSubscriptionData.indexOf(notificationName) > -1){ // check if should remove
+									
+					// get value in array
+					var notificationIndex = currentSubscriptionData.indexOf(notificationName);
+					
+					// remove from array
+					currentSubscriptionData.splice(notificationIndex, 1);
+					
+				};
+				// END IF - if notificationSubscribeValue true(1) and not if currentSubscriptionData then add or check to remove
+			};
+			// END Loop - through subscribeData
+			
+			// Set Ti.App.Properties - subscriptionData
+			Ti.App.Properties.setString("subscriptionData",JSON.stringify(currentSubscriptionData));
+			
+			
+		};
+		// END IF - subscribeData set then set according to that else set as currentSubscriptionData
+		
+	}else{ // set first time to defaults
+		
+		// set subscriptionData as Alloy.Globals.defaultNotificationSubscriptions
+		var subscriptionData = Alloy.Globals.defaultNotificationSubscriptions;
+		
+		// Set Ti.App.Properties - subscriptionData
+		Ti.App.Properties.setString("subscriptionData",JSON.stringify(subscriptionData));
+		
+	};
+	// END IF - currentSubscriptionData not false update - else set first time
+		
+};
+
+/**
+ * scheduleNotification to schedule notifcations for spesific category
+ *
+ * @param      {string}  notificationName  - The notification name
+ */
+function scheduleNotification(notificationName){
+	
+	//Ti.API.info(notificationName + " - Schedule");
+   		
+   	// START IF - notificationName handle accordingly
+   	if(notificationName == "vod"){
+    	
+    	// START Loop - Alloy.Globals.defaultNotificationDays
+		for (var d=0; d&lt;Alloy.Globals.defaultNotificationDays; d++){
+				
+			// set notificationID 
+			var notificationID = d;
+				 
+			// schedule VOD notification
+			scheduleVODNotification(notificationID);
+			
+		};
+   		// END Loop - Alloy.Globals.defaultNotificationDays
+	
+   	}else if(notificationName == "qod"){
+   					
+   		// START Loop - Alloy.Globals.defaultNotificationDays
+		for (var d=0; d&lt;Alloy.Globals.defaultNotificationDays; d++){
+				
+			// set notificationID 
+			var notificationID = d;
+				 
+			// schedule QOD notification
+			scheduleQODNotification(notificationID);
+		
+		};
+   		// END Loop - Alloy.Globals.defaultNotificationDays
+	
+   	}else if(notificationName == "comeBack"){
+   			
+   		// schedule comeBack notification
+   		comeBackToAppNotification();
+   			
+   	};
+   	// END IF - notificationName handle accordingly
+   			
+};
+
+/**
+ * scheduleVODNotification - build and schedule vod notifcations for days spesified
+ *
+ * @param      {number}  notificationID  - The notification id
+ */
+function scheduleVODNotification(notificationID){
+	
+	// set scheduleNotificationID
+	var scheduleNotificationID = (+VODStartID + notificationID);
+	
+	// set notificationName
+	var notificationName = "vodNotification";
+	
+	// set date to schedule notification for
+	var scheduleDate = new Date();					// set Date as now
+	
+	// set currentHours
+	var currentHours = scheduleDate.getHours();
+	
+	// START IF - currentHours &lt; Alloy.Globals.vodNotificationTime set addExtraDay 0 else 1
+	if (currentHours &lt; Alloy.Globals.vodNotificationTime){
+		var addExtraDay = 0;
+	}else{
+		var addExtraDay = 1;
+	};
+	// END IF - currentHours &lt; Alloy.Globals.qodNotificationTime set addExtraDay 0 else 1
+												
+	scheduleDate.setDate(scheduleDate.getDate() + addExtraDay + notificationID);		// add addExtraDay + notificationID
+	scheduleDate.setHours(Alloy.Globals.vodNotificationTime);							// set hour to Alloy.Globals.vodNotificationTime
+	scheduleDate.setMinutes(0);															// zero out minutes
+	scheduleDate.setSeconds(0);															// zero out seconds
+	
+	//Ti.API.info("Schedule for: " + scheduleDate);
+	
+	// Get Day of Year
+	var dayOfYear = scheduleDate.getDOY();
+	
+	// require vodPrepare module
+	var vodPrepare = require('vodPrepare/vodPrepare');
+	
+	// set vodDataText
+	var vodDataText = vodPrepare.vodDataTextPrepare(dayOfYear);
+		
+	// get VOD according to day of year as when to schedule notification above  
+	// build notification									
+	// START IF - iOS ELSE Android
+	if (OS_IOS){
+		
+		// set message
+		var message = L("todaysVerse") + " : " + vodDataText.vodText;
+		
+	  	// set scheduled notification
+	    var notification = Ti.App.iOS.scheduleLocalNotification({
+	        
+	        // Create an ID for the notification 
+	        userInfo: {"id": scheduleNotificationID, "alertType": notificationName, "alertData": vodDataText},
+	        alertBody: message,
+	        badge: 1,
+	        date: scheduleDate, 
+	        	        
+	    });
+    		
+   }else{ // ELSE ANDROID
+   		
+   		// set Language String
+		var title = L("todaysVerse");
+	
+   		// set message
+		var message = vodDataText.vodText;
+		
+   		// set notificationExtras
+   		var notificationExtras = {	alertType: notificationName,
+   									alertData: vodDataText,
+   									};
+   									
+   		// set notificationData
+   		var notificationData = {	content: message, 												// content string
+   									title: title, 													// title string
+   									id: scheduleNotificationID,										// id - numbers only
+   									time: (scheduleDate.getTime() - new Date().getTime()),        	// time from now in miliseconds 
+   									extras: notificationExtras,										// extras as object if needed		
+   								};
+   		
+   		// use JPush to addLocalNotication							
+		JPush.addLocalNotification(notificationData);
+   	
+   };
+   // END IF - iOS ELSE Android
+   
+};
+
+/**
+ * scheduleQODNotification - build and schedule qod notifcations for days spesified
+ *
+ * @param      {number}  notificationID - The notification id
+ */
+function scheduleQODNotification(notificationID){
+	
+	// set scheduleNotificationID
+  	var scheduleNotificationID = (+QODStartID + notificationID);
+  
+	// set notificationName
+  	var notificationName = "qodNotification";
+  	
+  	// set date to schedule notification for
+	var scheduleDate = new Date();                      // set Date as now
+	
+	// set currentHours
+	var currentHours = scheduleDate.getHours();
+	
+	// START IF - currentHours &lt; Alloy.Globals.qodNotificationTime set addExtraDay 0 else 1
+	if (currentHours &lt; Alloy.Globals.qodNotificationTime){
+		var addExtraDay = 0;
+	}else{
+		var addExtraDay = 1;
+	};
+	// END IF - currentHours &lt; Alloy.Globals.qodNotificationTime set addExtraDay 0 else 1
+	
+	scheduleDate.setDate(scheduleDate.getDate() + addExtraDay + notificationID);    // add addExtraDay + notificationID
+	scheduleDate.setHours(Alloy.Globals.qodNotificationTime);       // set hour to Alloy.Globals.vodNotificationTime
+	scheduleDate.setMinutes(0);                       // zero out minutes
+	scheduleDate.setSeconds(0);                       // zero out seconds
+  
+  	// Get Day of Year
+  	var dayOfYear = scheduleDate.getDOY();
+  
+	// require qodPrepare module
+  	var qodPrepare = require('qodPrepare');
+ 	 
+  	// set qodDataText
+  	var qodDataText = qodPrepare.qodDataTextPrepare(dayOfYear);
+  	
+  	// get VOD according to day of year as when to schedule notification above  
+  	// build notification                 
+  	// START IF - iOS ELSE Android
+  	if (OS_IOS){
+    
+   		// set message
+  		var message = L("todaysQuestion") + " : «" + qodDataText.qodText + "»";
+    
+      	// set scheduled notification
+      	var notification = Ti.App.iOS.scheduleLocalNotification({
+          
+          	// Create an ID for the notification 
+         	userInfo: {"id": scheduleNotificationID, "alertType": notificationName, "alertData": qodDataText},	
+          	alertBody: message,
+          	badge: 2,
+          	date: scheduleDate, 
+                    
+     	 });
+        
+   }else{ // ELSE ANDROID
+      
+      	// set Language String
+    	var title = L("todaysQuestion");
+  
+      	// set message
+      	var message = "«" + qodDataText.qodText + "»";
+    
+      	// set notificationExtras
+      	var notificationExtras = {  alertType: notificationName,
+                    				alertData: qodDataText,
+                    };
+                    
+      	// set notificationData
+      	var notificationData = {  	content: message,               								// content string
+                    				title: title,                									// title string
+                    				id: scheduleNotificationID,         							// id - numbers only             		
+                   					time: (scheduleDate.getTime() - new Date().getTime()),        	// time from now in miliseconds     					
+                    				extras: notificationExtras,        						 		// extras as object if needed
+                  };
+      
+      	// use JPush to addLocalNotication              
+    	JPush.addLocalNotification(notificationData);
+    
+   };
+   // END IF - iOS ELSE Android
+   
+};
+
+/**
+ * comeBackToAppNotification - build and schedule to 'Come Back To App' notifcation
+ */
+function comeBackToAppNotification(){
+	
+	// START IF - check subscriptionData and set badgeNumber
+	// Get Ti.App.Properties - subscriptionData
+	var currentSubscriptionData = JSON.parse(Ti.App.Properties.getString("subscriptionData",'false'));
+	if(currentSubscriptionData.length>2){
+		var badgeNumber = 3;
+	}else{
+		var badgeNumber = 2;
+	};
+	// END IF - check subscriptionData and set badgeNumber
+	
+	// set scheduleNotificationID
+	var scheduleNotificationID = comeBackID;
+	
+	// set notificationName
+	var notificationName = "comeBackNotification";
+	
+	// set Language String
+	var title = L("appName"); 
+	var message = L("comeBackToAppMessage");
+	
+	// set days until notification needs to be shown
+	var days = Alloy.Globals.defaultComeBackNotificationDays;
+	var daysVar = 1000 * 60 * 60 * 24 * days;
+								
+	// START IF - iOS ELSE Android
+	if (OS_IOS){
+		
+	  	// set scheduled notification
+	    var notification = Ti.App.iOS.scheduleLocalNotification({
+	        
+	        // Create an ID for the notification 
+	        userInfo: {"id": scheduleNotificationID, "alertType": notificationName,},
+	        alertBody: message,
+	        badge: badgeNumber, 
+	        date: new Date(new Date().getTime() + daysVar),
+	        
+	    });
+    		
+   }else{ // ELSE ANDROID
+   		
+   		// set notificationExtras
+   		var notificationExtras = {	alertType: notificationName,
+   									};
+   									
+   		// set notificationData
+   		var notificationData = {	content: message, 							// content string
+   									title: title, 								// title string
+   									id: scheduleNotificationID,					// id - numbers only
+   									time: daysVar,								// time from now in miliseconds
+   									extras: notificationExtras,					// extras as object if needed
+   								};
+   		
+   		// use JPush to addLocalNotication							
+		JPush.addLocalNotification(notificationData);
+   	
+   };
+   // END IF - iOS ELSE Android
+   
+};</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/jquery-3.1.1.min.js"></script>
+
+<script src="scripts/search.js"></script>
+
+
+<script src="scripts/collapse.js"></script>
+
+
+
+</body>
+</html>

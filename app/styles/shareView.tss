@@ -1,0 +1,50 @@
+"#shareWindow": {
+	backgroundImage: '/images/transparent_black.png',
+	width:	Ti.UI.FILL,
+	height: Ti.UI.FILL,	
+}
+"#main":{
+	backgroundColor:'white',
+	opacity: 0.90,
+	borderRadius:5,
+	width: "85%",
+	height: "85%",
+	layout: 'composite',
+}
+"#closeTop":{
+	width: "40dp",
+	height: "40dp",
+	top:0,
+	left: 0,
+}
+"#closeImage":{
+	backgroundImage: '/images/close.png',
+	width:	Ti.UI.FILL,
+	height: Ti.UI.FILL,	
+}
+"#shareImageView":{
+	width:	Ti.UI.FILL,
+	height: Ti.UI.FILL,	
+	top: "40dp",
+	bottom:"75dp",
+}
+"#shareImage":{
+	backgroundImage: Alloy.Globals.QRImageFullPath,
+	width: "200dp",
+	height: "200dp",
+}
+"#shareButtonView":{
+	width:	Ti.UI.FILL,
+	height: "50dp",
+	bottom: "25dp",
+}
+"#shareButton":{
+	title: L("shareButton"),
+	color: "white",
+	backgroundImage: '/images/chapter_menu_button.png',
+	width: "80%",
+	height: Ti.UI.FILL,	
+	font: {
+		fontSize: '22dp',
+		fontFamily: Alloy.Globals.customFont},
+}

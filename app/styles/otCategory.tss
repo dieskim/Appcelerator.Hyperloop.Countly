@@ -1,0 +1,11 @@
+"#topLabel": {
+	text: L("otIndex"),
+}	
+"#contentArea":{
+bottom: 0,
+height: Ti.UI.FILL,
+width: Ti.UI.FILL,
+layout: "composite",
+backgroundImage: "/images/category_back.jpg",
+backgroundColor: "#2A2A2A",
+}

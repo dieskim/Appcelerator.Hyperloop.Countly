@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>lib/scheduleNotifications/subscribeForm.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-activityLoader.html">activityLoader</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-activityLoader.html#~createActivityLoader">createActivityLoader</a></li></ul></li><li><a href="module-alertFormOpenClose.html">alertFormOpenClose</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-alertFormOpenClose.html#~alertFormOpenClose">alertFormOpenClose</a></li><li data-type='method' style='display: none;'><a href="module-alertFormOpenClose.html#~shouldAlertFormBeOnTop">shouldAlertFormBeOnTop</a></li></ul></li><li><a href="module-appPauseResume.html">appPauseResume</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-appPauseResume.html#~appPauseResume">appPauseResume</a></li><li data-type='method' style='display: none;'><a href="module-appPauseResume.html#~isInForegroundCheck">isInForegroundCheck</a></li></ul></li><li><a href="module-checkCountlyURL.html">checkCountlyURL</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkCountlyURL.html#.checkURL">checkURL</a></li><li data-type='method' style='display: none;'><a href="module-checkCountlyURL.html#.getURL">getURL</a></li></ul></li><li><a href="module-checkDownloadURL.html">checkDownloadURL</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-checkDownloadURL.html#.checkDownloadURL">checkDownloadURL</a></li><li data-type='member' style='display: none;'><a href="module-checkDownloadURL.html#.requestStoragePermissions">requestStoragePermissions</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~downloadURL">downloadURL</a></li><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~logStorageError">logStorageError</a></li><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~openSettings">openSettings</a></li></ul></li><li><a href="module-checkEnableFeatures.html">checkEnableFeatures</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#.checkEnableXML">checkEnableXML</a></li><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#.enableDisable">enableDisable</a></li><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#~setiOSDateEnable">setiOSDateEnable</a></li></ul></li><li><a href="module-countlyModule.html">countlyModule</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.crashTest">crashTest</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.enableDebug">enableDebug</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.getDeviceID">getDeviceID</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordCrashLog">recordCrashLog</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordEvent">recordEvent</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordHandledException">recordHandledException</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordLocation">recordLocation</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordUnhandledException">recordUnhandledException</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.resume">resume</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.start">start</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.stop">stop</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.userData">userData</a></li></ul></li><li><a href="module-crmSendData.html">crmSendData</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmCreateUpdate">crmCreateUpdate</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmLogin">crmLogin</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSearch">crmSearch</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSendData">crmSendData</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSendTask">crmSendTask</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~getSetCRMUserData">getSetCRMUserData</a></li></ul></li><li><a href="module-customForm.html">customForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-customForm.html#.show">show</a></li></ul></li><li><a href="module-getSetFontSize.html">getSetFontSize</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-getSetFontSize.html#~getSetFontSize">getSetFontSize</a></li></ul></li><li><a href="module-locationData.html">locationData</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-locationData.html#.getCurrentLocation">getCurrentLocation</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#.getLocationData">getLocationData</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#~getLocationNow">getLocationNow</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#~logLocationError">logLocationError</a></li></ul></li><li><a href="module-navigationOpenClose.html">navigationOpenClose</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.closeNavigationView">closeNavigationView</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.navigationGoHome">navigationGoHome</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.navigationUpdateData">navigationUpdateData</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.openNavigationView">openNavigationView</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#~navigationOpenCloseView">navigationOpenCloseView</a></li></ul></li><li><a href="module-openLastOpenView.html">openLastOpenView</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-openLastOpenView.html#~openLastOpenView">openLastOpenView</a></li></ul></li><li><a href="module-pushAlert.html">pushAlert</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pushAlert.html#.pushAlert">pushAlert</a></li><li data-type='method' style='display: none;'><a href="module-pushAlert.html#.showPushXML">showPushXML</a></li><li data-type='method' style='display: none;'><a href="module-pushAlert.html#~pushPopUp">pushPopUp</a></li></ul></li><li><a href="module-reviewDialog.html">reviewDialog</a></li><li><a href="module-scheduleNotifications.html">scheduleNotifications</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#.scheduleLocalNotification">scheduleLocalNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~comeBackToAppNotification">comeBackToAppNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleNotification">scheduleNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleQODNotification">scheduleQODNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleVODNotification">scheduleVODNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~subscribeToNotifactions">subscribeToNotifactions</a></li></ul></li><li><a href="module-sendForm.html">sendForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-sendForm.html#~removeFirstFormFromArray">removeFirstFormFromArray</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~sendFormsFunction">sendFormsFunction</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~storeFormsToSend">storeFormsToSend</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~submitAllForms">submitAllForms</a></li></ul></li><li><a href="module-showFeedbackForm.html">showFeedbackForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~inputArrayItemValue">inputArrayItemValue</a></li><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~sendForm">sendForm</a></li><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~showFeedbackForm">showFeedbackForm</a></li></ul></li><li><a href="module-showForms.html">showForms</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-showForms.html#.showShare">showShare</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadBasic">booksReadBasic</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadComplete">booksReadComplete</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadHalf">booksReadHalf</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.selectedReadingReadComplete">selectedReadingReadComplete</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.showAppHighUsageForm">showAppHighUsageForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.showContact">showContact</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~shareRequestForm">shareRequestForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showBooksReadBasicForm">showBooksReadBasicForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showBooksReadCompleteForm">showBooksReadCompleteForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showSelectedReadingReadCompleteForm">showSelectedReadingReadCompleteForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showShareFunction">showShareFunction</a></li></ul></li><li><a href="module-subscribeForm.html">subscribeForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-subscribeForm.html#~subscribeForm">subscribeForm</a></li></ul></li><li><a href="module-updateApp.html">updateApp</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-updateApp.html#~downloadAlert">downloadAlert</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~downloadUpdate">downloadUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~installAppUpdate">installAppUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~showAndroidNotification">showAndroidNotification</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~updateApp">updateApp</a></li></ul></li><li><a href="module-updateCheck.html">updateCheck</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~appVersionCompare">appVersionCompare</a></li><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~checkUpdate">checkUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~showUpdateForm">showUpdateForm</a></li></ul></li><li><a href="module-vodPrepare.html">vodPrepare</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-vodPrepare.html#.vodDataTextPrepare">vodDataTextPrepare</a></li><li data-type='method' style='display: none;'><a href="module-vodPrepare.html#~vodDataPrepare">vodDataPrepare</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="global.html#event:app:showAlertMessage">app:showAlertMessage</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Alloy.Globals.AnalyticsDeviceID">Alloy.Globals.AnalyticsDeviceID</a></li><li><a href="global.html#Alloy.Globals.AnalyticsEvent">Alloy.Globals.AnalyticsEvent</a></li><li><a href="global.html#Alloy.Globals.AnalyticsRecordLocation">Alloy.Globals.AnalyticsRecordLocation</a></li><li><a href="global.html#Alloy.Globals.bibleDBTextGenerate">Alloy.Globals.bibleDBTextGenerate</a></li><li><a href="global.html#Alloy.Globals.databaseData">Alloy.Globals.databaseData</a></li><li><a href="global.html#Alloy.Globals.defaultComeBackNotificationDays">Alloy.Globals.defaultComeBackNotificationDays</a></li><li><a href="global.html#Alloy.Globals.defaultNotificationDays">Alloy.Globals.defaultNotificationDays</a></li><li><a href="global.html#Alloy.Globals.defaultNotificationSubscriptions">Alloy.Globals.defaultNotificationSubscriptions</a></li><li><a href="global.html#Alloy.Globals.enableDateDelayedFunctions">Alloy.Globals.enableDateDelayedFunctions</a></li><li><a href="global.html#Alloy.Globals.enableFeaturesDateIOS">Alloy.Globals.enableFeaturesDateIOS</a></li><li><a href="global.html#Alloy.Globals.locationDefault">Alloy.Globals.locationDefault</a></li><li><a href="global.html#Alloy.Globals.openAlertForm">Alloy.Globals.openAlertForm</a></li><li><a href="global.html#Alloy.Globals.openAlertFormArray">Alloy.Globals.openAlertFormArray</a></li><li><a href="global.html#Alloy.Globals.openWindow">Alloy.Globals.openWindow</a></li><li><a href="global.html#Alloy.Globals.qodNotificationTime">Alloy.Globals.qodNotificationTime</a></li><li><a href="global.html#Alloy.Globals.storageDevice">Alloy.Globals.storageDevice</a></li><li><a href="global.html#Alloy.Globals.vodNotificationTime">Alloy.Globals.vodNotificationTime</a></li><li><a href="global.html#databaseUpdateAlert">databaseUpdateAlert</a></li><li><a href="global.html#downloadUpdateDatabases">downloadUpdateDatabases</a></li><li><a href="global.html#updateDatabases">updateDatabases</a></li><li><a href="global.html#VirtualScroller">VirtualScroller</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/scheduleNotifications/subscribeForm.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * subscribeForm
+ * - builds a subscribe form to allow the user to subscribe to notifications
+ * 
+ * Alloy.Globals: 
+ * - {@link Alloy.Globals.customFont Alloy.Globals.customFont}
+ * - {@link Alloy.Globals.openWindow Alloy.Globals.openWindow}
+ * - {@link Alloy.Globals.openAlertForm Alloy.Globals.openAlertForm}
+ * - {@link Alloy.Globals.languageDirection Alloy.Globals.languageDirection}
+ * 
+ * @requires   scheduleNotifications
+ * @requires   alertFormOpenClose
+ * @module subscribeForm
+ * 
+ * @example    &lt;caption>Require and run returned function to show form&lt;/caption>
+ * 
+ * // require module subscribeForm in app/assets/lib/
+	var subscribeForm = require('scheduleNotifications/subscribeForm');
+	
+	// show subscribeForm
+	subscribeForm();
+ * 
+ */
+
+/**
+ * Builds and shows subscribe form 
+ * - runs functions to set subscribed notifications
+ * @return     {function}  - function that builds and shows subscribe form then sets subscribed notifications
+ */
+function subscribeForm(){
+	
+	Ti.API.info("subscribeForm Module Function");
+
+	// set params as from data
+	var title = L("subscriptionHeaderText");
+	var message = L("subscriptionMessageText");
+	var saveButton = L("confirm");
+	var formName = "subscribeForm";
+		
+	// START BUILD - subscribeOptions
+	var defaultSubscriptionData = Alloy.Globals.defaultNotificationSubscriptions;
+	
+	//remove comeBack
+	var indexOfComeBack = defaultSubscriptionData.indexOf("comeBack");
+	if (indexOfComeBack > -1) {
+    	defaultSubscriptionData.splice(indexOfComeBack, 1);
+	};
+
+	// set blank subscribeOptions
+	var subscribeOptions = [];
+
+	// START Loop - defaultSubscriptionData and add to subscribeOptions
+	for (var s=0; s&lt;defaultSubscriptionData.length; s++){
+				
+		// set notificationData 
+		var notificationData = {	name: defaultSubscriptionData[s],
+									title: L(defaultSubscriptionData[s]),
+								};
+		
+		// push to subscribeOptions
+		subscribeOptions.push(notificationData);		 
+		
+			
+	};
+   	// END Loop - defaultSubscriptionData and add to subscribeOptions
+									
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// 								START CREATION OF ALERTVIEW AND WINDOW											//
+	
+	// START IF - iOS or Android 
+	if (OS_IOS){
+			
+		// Set alertWindow
+		var alertWindow = Ti.UI.createWindow({
+			backgroundImage: '/images/transparent_black.png',
+			statusBarStyle: Ti.UI.iOS.StatusBar.LIGHT_CONTENT,
+		});
+			
+	}else{
+		// Set alertWindow
+		var alertWindow = Ti.UI.createView({
+			backgroundImage: '/images/transparent_black.png',
+			width:	Ti.UI.FILL,
+			height: Ti.UI.FILL,	
+		});
+	};
+	// END IF - iOS or Android 	
+
+	
+	// create alertView container
+	var alertView = Ti.UI.createScrollView({
+	  backgroundColor:'white',
+	  opacity: 0.90,
+	  borderRadius:5,
+	  width: "85%",
+	  height: Ti.UI.SIZE,
+	  layout: 'vertical',
+	});
+	
+	// create alertTitleView
+	var alertTitleView = Ti.UI.createView({
+	  width: Ti.UI.FILL,
+	  height: Ti.UI.SIZE,
+	});
+	
+	// create alertTitleLabel
+	var alertTitleLabel = Ti.UI.createLabel({
+	  text: title,
+	  color: 'black',
+	  textAlign: 'center',
+	  font: {
+		fontSize: '20dp',
+		fontFamily: Alloy.Globals.customFont
+	  },
+	  touchEnabled: false,	
+	  top: "15dp",
+	  left: 5,
+	  right: 5,
+	});
+	
+	alertTitleView.add(alertTitleLabel);
+	alertView.add(alertTitleView);
+	
+	// create alertMessageView
+	var alertMessageView = Ti.UI.createView({
+	  width: Ti.UI.FILL,
+	  height: Ti.UI.SIZE,
+	});
+	
+	// create alertMessageLabel
+	var alertMessageLabel = Ti.UI.createLabel({
+	  text: message,
+	  color: 'black',
+	  textAlign: 'center',
+	  font: {
+		fontSize: '16dp',
+		fontFamily: Alloy.Globals.customFont
+	  },
+	  touchEnabled: false,	
+	  bottom: "15dp",
+	  left: 5,
+	  right: 5,
+	});
+	
+	alertMessageView.add(alertMessageLabel);
+	alertView.add(alertMessageView);
+	
+	// 								END CREATION OF ALERTVIEW AND WINDOW											//
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// 										START CREATION OF FIELDS AS SENT										//
+	
+	// create alertInputFieldView Container
+	var alertInputFieldView = Ti.UI.createView({
+		width: Ti.UI.FILL,
+		height: Ti.UI.SIZE,
+		bottom: 10,
+		top: 10,
+		left: 10,
+		right: 10,
+	});
+		
+	// set selectorSubscribeSelected array
+	var selectorSubscribeSelected = [];
+			
+	// create alertInputFieldView
+	var selector = Ti.UI.createView({
+		width: Ti.UI.FILL,
+		height: Ti.UI.SIZE,
+		borderColor: '#bbb',
+		borderRadius: 5,
+		layout: "vertical",
+	});
+					
+	// set subscribeOptionsArray
+	var subscribeOptionsArray = subscribeOptions;
+					
+	// START Loop - through options
+	for (var t=0; t&lt;subscribeOptionsArray.length; t++){
+						
+		// set optionTitle		
+		var optionTitle = subscribeOptionsArray[t].title;
+		var optionName = subscribeOptionsArray[t].name;
+		
+		// Get Ti.App.Properties - subscriptionData
+		var currentSubscriptionData = JSON.parse(Ti.App.Properties.getString("subscriptionData",'false'));
+		
+		// START IF - check if optionName in currentSubscriptionData set value true else false
+		if(currentSubscriptionData &amp;&amp; currentSubscriptionData.indexOf(optionName) > -1){
+				
+			// set sunscribeValue 
+			var subscribeValue = true;
+			var backgroundValue = '/images/checkbox_checked.jpg';
+			
+		}else{
+			
+			// set sunscribeValue
+			var subscribeValue = false; 
+			var backgroundValue = '/images/checkbox_unchecked.jpg';
+			
+		};
+		// END IF - check if optionName in currentSubscriptionData set value true else false
+		
+		// create alertInputOption
+		var alertInputOption = Ti.UI.createView({
+			width: Ti.UI.FILL,
+			height: "35dp",
+			layout: "composite",
+			top:5,
+			bottom: 5,
+			right: 5,
+		});
+				
+		// create optionCheck 		
+		var optionCheck = Ti.UI.createImageView({
+			right: 5,
+			id: t,
+			title : optionTitle,
+			name: optionName,
+			value: subscribeValue,
+			backgroundImage: backgroundValue,
+			width: "30dp",
+  			height: "30dp",	
+		});
+		   			
+		// push current optionTitle and value to selectorSubscribeSelected array
+		selectorSubscribeSelected.push({	notificationName: optionName,
+		   									notificationSubscribeValue:subscribeValue });
+		   		
+		// addEventListener to listen for change and run functions
+		optionCheck.addEventListener('click',function(e){
+			
+			// set params
+			var inputValue = this.value;
+			var inputId = this.id;
+			var inputName = this.name;
+			var inputTitle = this.title;
+					
+			// START IF - value change
+			if (inputValue == false){
+						
+				// set inputValue
+				var inputValue = true;
+						
+				// update button data
+				this.backgroundImage = '/images/checkbox_checked.jpg',
+				this.value = true;
+						
+			}else{	
+						
+				// set inputValue
+				var inputValue = false;
+						
+				this.backgroundImage = '/images/checkbox_unchecked.jpg',
+				this.value = false;
+						
+			};
+			// END IF - value change
+							
+	
+			// update Array Value in selectorSubscribeSelected
+			selectorSubscribeSelected[inputId] = {		notificationName: inputName,
+		   												notificationSubscribeValue:inputValue }; 
+					  	
+		});
+
+		// create optionLabel
+		var optionLabel = Ti.UI.createLabel({
+			text : optionTitle,
+			font : {fontSize: '20dp',
+					fontFamily: Alloy.Globals.customFont},	
+			color: "black",
+		});
+		
+		// START IF - Alloy.Globals.languageDirection
+		if(Alloy.Globals.languageDirection == 'ltr'){				
+			optionLabel.textAlign = 'center';				
+		}else{					
+			// START IF ANDROID ELSE IOS SET RIGHT VALUE
+			if (OS_IOS) {
+				optionLabel.right = "70dp";
+			}else{
+				optionLabel.right = "50dp";
+			};
+			// END IF ANDROID ELSE IOS SET RIGHT VALUE					
+		};
+		// END IF - Alloy.Globals.languageDirection
+				    
+		alertInputOption.add(optionCheck);
+		alertInputOption.add(optionLabel);
+				
+		// add alertInputOption to selector   	
+		selector.add(alertInputOption);
+				
+	};
+	// END Loop - through options
+
+	// add selector to alertInputFieldView
+	alertInputFieldView.add(selector);
+	
+	//add alertInputFieldView to alertView
+	alertView.add(alertInputFieldView);
+			
+	// 										END CREATION OF FIELDS AS SENT											//
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// 										START CREATION OF BUTTONS 												//
+	
+	// set buttonArray
+	var buttonArray = [];
+	
+	// START IF - iOS else Android
+	if (OS_IOS){
+			
+		// Start Create alertButtonRow	  
+		var alertButtonRow = Ti.UI.createTableViewRow({
+			className:'buttonRow', 					// used to improve table performance
+			height: "45dp",
+			width:	Ti.UI.FILL,
+			top: 0,    
+			layout: "vertical",
+			selectedBackgroundColor: "#c8c8c8",
+		});
+			
+	}else{
+			
+		// Start Create alertButtonRow	  
+		var alertButtonRow = Ti.UI.createView({
+			height: "45dp",
+			width:	Ti.UI.FILL,
+			top: 0,    
+			layout: "vertical",
+		});
+			
+	};
+	// END IF - iOS else Android
+	
+	// create alertButtonView
+	var alertButtonView = Ti.UI.createView({
+		width: Ti.UI.FILL,
+		height: Ti.UI.FILL,
+		backgroundSelectedColor: "#c8c8c8",
+	});
+		
+	// create alertButtonView
+	var alertButtonSeperator = Ti.UI.createView({
+		width: Ti.UI.FILL,
+		height: "1dp",
+		backgroundColor: "#c8c8c8",
+		top: 0,		  
+	});
+	
+	// create alertButtonLabel
+	var alertButtonLabel = Ti.UI.createLabel({
+		text: saveButton,
+		color: '#639a13',
+		textAlign: 'center',
+		font: {
+			fontSize: '18dp',
+			fontFamily: Alloy.Globals.customFont
+		  },
+		  touchEnabled: false,	
+		  left: 5,
+	 	  right: 5,
+	});
+	
+	//////////////////////////////////////////////////////////////////////////////
+	// 		START addEventlistener to buttons to fun functions as needed		//
+		
+	alertButtonView.addEventListener('click', function(e) {
+		
+		Ti.API.info('The Save button was clicked');		    		
+		
+		// set subscribeData
+		var subscribeData = selectorSubscribeSelected;
+						
+		// require scheduleNotification module
+		var scheduleNotifications = require('scheduleNotifications/scheduleNotifications');
+		
+		// run scheduleLocalNotificaiton with subscribeData	
+		scheduleNotifications.scheduleLocalNotification(subscribeData);	
+				
+		// START IF - iOS or Android - CLOSE WINDOW
+		if (OS_IOS){
+			alertWindow.close();
+		}else{			
+			var currentWindow = Alloy.Globals.openWindow;
+			currentWindow.remove(alertWindow);	
+		};
+		// END IF - iOS or Android - CLOSE WINDOW
+					    	
+		// set Alloy.Globals.openAlertForm false
+		Alloy.Globals.openAlertForm = false;
+					
+	});		
+	// 		END addEventlistener to buttons to fun functions as needed		//
+	//////////////////////////////////////////////////////////////////////////////	
+	
+	alertButtonView.add(alertButtonSeperator);
+	alertButtonView.add(alertButtonLabel);
+	alertButtonRow.add(alertButtonView);
+	
+	// add to buttonArray
+	buttonArray.push(alertButtonRow);
+		
+	// START IF - iOS or Android 
+	if (OS_IOS){
+		
+		// Create tableView with rows as buttons
+		var buttonTableView = Ti.UI.createTableView({
+		  	data:buttonArray,
+		  	width:	Ti.UI.FILL,	
+			height: Ti.UI.SIZE,	
+		  	separatorColor: "transparent",
+		  	scrollable: false, 
+		});
+	
+		// add buttonTableView to alertView
+		alertView.add(buttonTableView);
+		
+	}else{
+		
+		// START Loop - through createButtons and add
+		for (var b=0; b&lt;buttonArray.length; b++){
+			
+			alertView.add(buttonArray[b]);
+			
+		};
+		// END Loop - through createButtons and add
+		
+	};
+	// END IF - iOS or Android 
+	
+	// 										END CREATION OF BUTTONS 												//
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+	// add alertView to Window
+	alertWindow.add(alertView);
+	
+	// require alertFormOpenClose
+	var alertFormOpenClose = require('alertFormOpenClose/alertFormOpenClose');
+	
+	// set alertFormData
+	var alertFormData = { 	alertFormName: formName,
+							alertWindow: alertWindow,
+							close:  function(){
+								
+								// START IF - iOS or Android - CLOSE WINDOW
+								if (OS_IOS){
+									alertWindow.close();
+								}else{
+									var currentWindow = Alloy.Globals.openWindow;
+									currentWindow.remove(alertWindow);	
+								};
+								// END IF - iOS or Android - CLOSE WINDOW
+								
+								// set Alloy.Globals.openAlertForm false
+								Alloy.Globals.openAlertForm = false;
+					
+							},
+	};
+	
+	// run alertFormOpenClose with alertWindow
+	alertFormOpenClose(alertFormData);
+				
+};
+
+module.exports = subscribeForm;</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/jquery-3.1.1.min.js"></script>
+
+<script src="scripts/search.js"></script>
+
+
+<script src="scripts/collapse.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+"#topicScrollView":{
+width:	Ti.UI.FILL,
+height: Ti.UI.FILL,	
+backgroundColor: "#F1EECD",
+left: 0,
+top: 0,
+scrollType: "vertical",
+}
+"#topicCategoryView":{
+top: 0,
+width:	Ti.UI.SIZE,
+height: Ti.UI.SIZE,	
+layout: "horizontal",
+}
+

@@ -1,0 +1,15 @@
+"#networkMessageView": {
+	height:"30dp",
+	width:'85%',
+	bottom:"70dp",
+	borderRadius:10,
+	touchEnabled:false,
+	backgroundImage: "/images/audio_back_trans.png",
+	visible: false, 
+}
+"#networkMessageLabel": {
+	color:'#fff',
+	width: Ti.UI.SIZE,
+	height:'auto',
+	textAlign:'center'
+}

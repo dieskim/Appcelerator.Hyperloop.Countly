@@ -1,0 +1,26 @@
+<Alloy>
+	<Window id="downloadWindow">
+		<View id="main">
+				<View id="topBar">
+					<View id="homeButtonBox">
+						<View id="homeButtonView">	
+							<Button id="backButton" onClick="closeWindow"></Button>							
+						</View>
+					</View>
+					<View id="titleTop">
+						<Label id="topLabel"></Label>
+					</View>
+					<View id="backButtonBox">
+						<View id="backButtonView">	
+							<Button id="editButton" onClick="editFunction"></Button>						
+						</View>
+					</View>
+				</View>	<!-- End Top Bar -->
+				<View id="bottomArea">
+					<View id="contentArea">							
+					</View>	<!-- End Content Area -->	
+				</View> <!-- End Bottom Area -->
+		</View>	<!-- End Main -->			
+		<Require src="networkMessageView"/> <!-- Require networkMessageView -->				
+    </Window>
+</Alloy>

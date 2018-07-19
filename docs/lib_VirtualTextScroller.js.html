@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>lib/VirtualTextScroller.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-activityLoader.html">activityLoader</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-activityLoader.html#~createActivityLoader">createActivityLoader</a></li></ul></li><li><a href="module-alertFormOpenClose.html">alertFormOpenClose</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-alertFormOpenClose.html#~alertFormOpenClose">alertFormOpenClose</a></li><li data-type='method' style='display: none;'><a href="module-alertFormOpenClose.html#~shouldAlertFormBeOnTop">shouldAlertFormBeOnTop</a></li></ul></li><li><a href="module-appPauseResume.html">appPauseResume</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-appPauseResume.html#~appPauseResume">appPauseResume</a></li><li data-type='method' style='display: none;'><a href="module-appPauseResume.html#~isInForegroundCheck">isInForegroundCheck</a></li></ul></li><li><a href="module-checkCountlyURL.html">checkCountlyURL</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkCountlyURL.html#.checkURL">checkURL</a></li><li data-type='method' style='display: none;'><a href="module-checkCountlyURL.html#.getURL">getURL</a></li></ul></li><li><a href="module-checkDownloadURL.html">checkDownloadURL</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-checkDownloadURL.html#.checkDownloadURL">checkDownloadURL</a></li><li data-type='member' style='display: none;'><a href="module-checkDownloadURL.html#.requestStoragePermissions">requestStoragePermissions</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~downloadURL">downloadURL</a></li><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~logStorageError">logStorageError</a></li><li data-type='method' style='display: none;'><a href="module-checkDownloadURL.html#~openSettings">openSettings</a></li></ul></li><li><a href="module-checkEnableFeatures.html">checkEnableFeatures</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#.checkEnableXML">checkEnableXML</a></li><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#.enableDisable">enableDisable</a></li><li data-type='method' style='display: none;'><a href="module-checkEnableFeatures.html#~setiOSDateEnable">setiOSDateEnable</a></li></ul></li><li><a href="module-countlyModule.html">countlyModule</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.crashTest">crashTest</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.enableDebug">enableDebug</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.getDeviceID">getDeviceID</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordCrashLog">recordCrashLog</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordEvent">recordEvent</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordHandledException">recordHandledException</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordLocation">recordLocation</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.recordUnhandledException">recordUnhandledException</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.resume">resume</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.start">start</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.stop">stop</a></li><li data-type='method' style='display: none;'><a href="module-countlyModule.html#.userData">userData</a></li></ul></li><li><a href="module-crmSendData.html">crmSendData</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmCreateUpdate">crmCreateUpdate</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmLogin">crmLogin</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSearch">crmSearch</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSendData">crmSendData</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~crmSendTask">crmSendTask</a></li><li data-type='method' style='display: none;'><a href="module-crmSendData.html#~getSetCRMUserData">getSetCRMUserData</a></li></ul></li><li><a href="module-customForm.html">customForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-customForm.html#.show">show</a></li></ul></li><li><a href="module-getSetFontSize.html">getSetFontSize</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-getSetFontSize.html#~getSetFontSize">getSetFontSize</a></li></ul></li><li><a href="module-locationData.html">locationData</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-locationData.html#.getCurrentLocation">getCurrentLocation</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#.getLocationData">getLocationData</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#~getLocationNow">getLocationNow</a></li><li data-type='method' style='display: none;'><a href="module-locationData.html#~logLocationError">logLocationError</a></li></ul></li><li><a href="module-navigationOpenClose.html">navigationOpenClose</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.closeNavigationView">closeNavigationView</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.navigationGoHome">navigationGoHome</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.navigationUpdateData">navigationUpdateData</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#.openNavigationView">openNavigationView</a></li><li data-type='method' style='display: none;'><a href="module-navigationOpenClose.html#~navigationOpenCloseView">navigationOpenCloseView</a></li></ul></li><li><a href="module-openLastOpenView.html">openLastOpenView</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-openLastOpenView.html#~openLastOpenView">openLastOpenView</a></li></ul></li><li><a href="module-pushAlert.html">pushAlert</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pushAlert.html#.pushAlert">pushAlert</a></li><li data-type='method' style='display: none;'><a href="module-pushAlert.html#.showPushXML">showPushXML</a></li><li data-type='method' style='display: none;'><a href="module-pushAlert.html#~pushPopUp">pushPopUp</a></li></ul></li><li><a href="module-reviewDialog.html">reviewDialog</a></li><li><a href="module-scheduleNotifications.html">scheduleNotifications</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#.scheduleLocalNotification">scheduleLocalNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~comeBackToAppNotification">comeBackToAppNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleNotification">scheduleNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleQODNotification">scheduleQODNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~scheduleVODNotification">scheduleVODNotification</a></li><li data-type='method' style='display: none;'><a href="module-scheduleNotifications.html#~subscribeToNotifactions">subscribeToNotifactions</a></li></ul></li><li><a href="module-sendForm.html">sendForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-sendForm.html#~removeFirstFormFromArray">removeFirstFormFromArray</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~sendFormsFunction">sendFormsFunction</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~storeFormsToSend">storeFormsToSend</a></li><li data-type='method' style='display: none;'><a href="module-sendForm.html#~submitAllForms">submitAllForms</a></li></ul></li><li><a href="module-showFeedbackForm.html">showFeedbackForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~inputArrayItemValue">inputArrayItemValue</a></li><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~sendForm">sendForm</a></li><li data-type='method' style='display: none;'><a href="module-showFeedbackForm.html#~showFeedbackForm">showFeedbackForm</a></li></ul></li><li><a href="module-showForms.html">showForms</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-showForms.html#.showShare">showShare</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadBasic">booksReadBasic</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadComplete">booksReadComplete</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.booksReadHalf">booksReadHalf</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.selectedReadingReadComplete">selectedReadingReadComplete</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.showAppHighUsageForm">showAppHighUsageForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#.showContact">showContact</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~shareRequestForm">shareRequestForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showBooksReadBasicForm">showBooksReadBasicForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showBooksReadCompleteForm">showBooksReadCompleteForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showSelectedReadingReadCompleteForm">showSelectedReadingReadCompleteForm</a></li><li data-type='method' style='display: none;'><a href="module-showForms.html#~showShareFunction">showShareFunction</a></li></ul></li><li><a href="module-subscribeForm.html">subscribeForm</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-subscribeForm.html#~subscribeForm">subscribeForm</a></li></ul></li><li><a href="module-updateApp.html">updateApp</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-updateApp.html#~downloadAlert">downloadAlert</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~downloadUpdate">downloadUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~installAppUpdate">installAppUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~showAndroidNotification">showAndroidNotification</a></li><li data-type='method' style='display: none;'><a href="module-updateApp.html#~updateApp">updateApp</a></li></ul></li><li><a href="module-updateCheck.html">updateCheck</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~appVersionCompare">appVersionCompare</a></li><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~checkUpdate">checkUpdate</a></li><li data-type='method' style='display: none;'><a href="module-updateCheck.html#~showUpdateForm">showUpdateForm</a></li></ul></li><li><a href="module-vodPrepare.html">vodPrepare</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-vodPrepare.html#.vodDataTextPrepare">vodDataTextPrepare</a></li><li data-type='method' style='display: none;'><a href="module-vodPrepare.html#~vodDataPrepare">vodDataPrepare</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="global.html#event:app:showAlertMessage">app:showAlertMessage</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Alloy.Globals.AnalyticsDeviceID">Alloy.Globals.AnalyticsDeviceID</a></li><li><a href="global.html#Alloy.Globals.AnalyticsEvent">Alloy.Globals.AnalyticsEvent</a></li><li><a href="global.html#Alloy.Globals.AnalyticsRecordLocation">Alloy.Globals.AnalyticsRecordLocation</a></li><li><a href="global.html#Alloy.Globals.bibleDBTextGenerate">Alloy.Globals.bibleDBTextGenerate</a></li><li><a href="global.html#Alloy.Globals.databaseData">Alloy.Globals.databaseData</a></li><li><a href="global.html#Alloy.Globals.defaultComeBackNotificationDays">Alloy.Globals.defaultComeBackNotificationDays</a></li><li><a href="global.html#Alloy.Globals.defaultNotificationDays">Alloy.Globals.defaultNotificationDays</a></li><li><a href="global.html#Alloy.Globals.defaultNotificationSubscriptions">Alloy.Globals.defaultNotificationSubscriptions</a></li><li><a href="global.html#Alloy.Globals.enableDateDelayedFunctions">Alloy.Globals.enableDateDelayedFunctions</a></li><li><a href="global.html#Alloy.Globals.enableFeaturesDateIOS">Alloy.Globals.enableFeaturesDateIOS</a></li><li><a href="global.html#Alloy.Globals.locationDefault">Alloy.Globals.locationDefault</a></li><li><a href="global.html#Alloy.Globals.openAlertForm">Alloy.Globals.openAlertForm</a></li><li><a href="global.html#Alloy.Globals.openAlertFormArray">Alloy.Globals.openAlertFormArray</a></li><li><a href="global.html#Alloy.Globals.openWindow">Alloy.Globals.openWindow</a></li><li><a href="global.html#Alloy.Globals.qodNotificationTime">Alloy.Globals.qodNotificationTime</a></li><li><a href="global.html#Alloy.Globals.storageDevice">Alloy.Globals.storageDevice</a></li><li><a href="global.html#Alloy.Globals.vodNotificationTime">Alloy.Globals.vodNotificationTime</a></li><li><a href="global.html#databaseUpdateAlert">databaseUpdateAlert</a></li><li><a href="global.html#downloadUpdateDatabases">downloadUpdateDatabases</a></li><li><a href="global.html#updateDatabases">updateDatabases</a></li><li><a href="global.html#VirtualScroller">VirtualScroller</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/VirtualTextScroller.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*
+ * VirtualScroller v1.2
+ *
+ * An improved (and generic) version of the infinite scrolling view: https://gist.github.com/810171
+ *
+ * Features:
+ *
+ * + Finite and infinite scrolling
+ * + New views are generated on demand via a callback: no hardcoding
+ * + Ability to specify starting position
+ * + Only five views are ever loaded into memory at the same time, no matter how many
+ *   you actually have
+ * + Customizable: specify the base ScrollableView and container properties
+ * + Glitch free scrolling
+ *
+ * Check out the BitBucket repository (of the same name) for usage information.
+ *
+ * Copyright (c) 2012-2013 Chris Laplante (MostThingsWeb)
+ * Licensed under MIT license (see license file in source package)
+ *
+ * mostthingsweb.com
+ *
+ */
+
+/**
+ * Create and return a VirtualScroller instance.
+ * @param options An object containing the options for the instance. See documentation at BitBucket for details and supported options.
+ *
+ */
+
+function VirtualScroller(options) {
+    // 'merge' from deepmerge project (https://github.com/nrf110/deepmerge)
+    function merge(b,c){var e=Array.isArray(c),d=e?[]:{};e?(b=b||[],d=d.concat(b),c.forEach(function(a,c){"object"===typeof a?d[c]=merge(b[c],a):-1===b.indexOf(a)&amp;&amp;d.push(a);})):(b&amp;&amp;"object"===typeof b&amp;&amp;Object.keys(b).forEach(function(a){d[a]=b[a];}),Object.keys(c).forEach(function(a){d[a]="object"===typeof c[a]&amp;&amp;c[a]?b[a]?merge(b[a],c[a]):c[a]:c[a];}));return d;};
+
+    // Set default options
+    options = merge({
+        start: 0,
+        infinite: true,
+        touch: true,
+        autoFocus: false,
+        scrollerDef: {
+            showPagingControl: false,
+            cacheSize: 7,
+        },
+        containerDef: {
+            backgroundColor: '#F1EECD',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0
+        }
+    }, options);
+
+    function missing(obj) {
+        return (obj === undefined || obj === null);
+    }
+
+    // Verify that required arguments exist
+    if (missing(options.start) || missing(options.getView)) {
+        return;
+    }
+
+    // Make sure start is a number
+    if ((typeof options.start) !== "number") {
+        options.start = parseInt(options.start, 10);
+    }
+
+    // - Need getView
+    if (options.start &lt; 0 || options.getView === null || options.getView === undefined) {
+        return null;
+    }
+
+    if (!options.infinite) {
+        // - Need at least three items
+        // - Start can't be greater than 1 minus number of elements
+        if (missing(options.itemCount) || options.itemCount &lt; 5 || options.start > options.itemCount - 1) {
+            return null;
+        }
+    }
+
+    var scrollable = Ti.UI.createScrollableView(options.scrollerDef);
+    var lastVirtualIndex = options.itemCount - 1;
+    // Zero-based index representing our location relative to the complete set of views
+    var currentVirtualIndex = options.start;
+
+    function getScrollEndHandlerName() {
+        // In version 3.X of Titanium, scrollEnd is deprecated and is replaced by scrollend (all lowercase)
+        return missing(scrollable.scrollend) ? "scrollend" : "scrollEnd";
+    }
+
+    // Create the containers
+    var containers = [];
+    for (var i = 0; i &lt; 5; i++) {
+        containers.push(Ti.UI.createView(options.containerDef));
+    }
+    scrollable.views = containers;
+
+    function emptyView(container) {
+        // Empty out any children
+        if (container.children) {
+            for (var c = container.children.length - 1; c >= 0; c--) {
+                container.children[c] = null;
+                container.remove(container.children[c]);
+            }
+        }
+    }
+	    // Function to load the view with the specified virtual index into the specified container,
+    // replacing all existing views in the container
+    function loadView(container, vIndex) {
+        emptyView(container);
+
+        // Remember the virtual index this container holds
+        container.vIndex = vIndex;
+        container.add(options.getView(vIndex));
+    }
+
+    // Determine the page number given the virtual index
+    function getPageFromIndex(vIndex) {
+        // First two pages
+        if (vIndex == 0) {
+            return 4;
+        }else if (vIndex == 1){
+        	return 3;        	
+        }
+
+        // Last two pages (for non-infinite configurations)
+        if (!options.infinite) {
+            if (vIndex === lastVirtualIndex) {
+                return 0;
+            } else if (vIndex === lastVirtualIndex - 1) {
+                return 1;
+            }
+        }
+
+        // Somewhere in the middle
+        return 2;
+    }
+	
+    scrollable.currentPage = getPageFromIndex(options.start);
+
+    // Build initial views
+    var initialState = [];
+    if (options.start &lt;= 2) {
+        // Page 0, 1, or 2 is active
+        initialState = [4, 3, 2, 1, 0];
+    } else if (!options.infinite &amp;&amp; options.start == lastVirtualIndex - 1) {
+    	// Second Last element active
+        initialState = [options.start + 1, options.start, options.start - 1, options.start - 2, options.start - 3];
+    } else if (!options.infinite &amp;&amp; options.start == lastVirtualIndex) {
+        // Last element active
+        initialState = [options.start, options.start - 1, options.start - 2, options.start - 3, options.start - 4];
+    } else {
+        // Somewhere in the middle is active
+        initialState = [options.start + 2, options.start + 1, options.start, options.start - 1, options.start - 2];
+    }
+
+    for (var j = 0; j &lt; 5; j++) {
+        loadView(containers[j], initialState[j]);
+    }
+
+    initialState = null;
+
+    // The virtual index of the last page that was active
+    var previousVirtualIndex = currentVirtualIndex;
+	
+	// START FUNCTION - scrollEndListener
+    function scrollEndListener(e) {
+    	
+    	//Ti.API.info("scrollEndListener");    	
+    							
+		// ADDED BY DIESKIM - Disable scrolling 
+		scrollable.scrollingEnabled	= false;
+			
+        var currentPage = e.currentPage;
+        
+        currentVirtualIndex = containers[currentPage].vIndex;
+
+        // Determine scroll direction
+        var left;
+        if (previousVirtualIndex &lt; currentVirtualIndex) {
+            left = true;
+       		
+       		// Added by Dieskim - Fire App Event prev Chapter
+          	var chapterID = scrollable.views[currentPage].children[0].chapterID;
+          	
+          	var directionData = {direction: "next",chapterID: chapterID, };  
+          	options.scrollerDirectionChange(directionData);        	
+       		// Added by Dieskim  
+       		   
+        } else if (previousVirtualIndex > currentVirtualIndex) {
+            left = false;
+       		
+       		// Added by Dieskim - Fire App Event next Chapter  
+      		var chapterID = scrollable.views[currentPage].children[0].chapterID;  
+      		 
+           	var directionData = {direction: "prev",chapterID: chapterID, };  
+          	options.scrollerDirectionChange(directionData);
+       		// Added by Dieskim     
+       		
+        } else {
+            
+            // We didn't move
+            
+            // Added by Dieskim - eneable scrolling again    
+            scrollable.scrollingEnabled	= true;
+            
+            return;
+        }
+
+        // How many pages were scrolled?
+        var numScrolled = Math.abs(previousVirtualIndex - currentVirtualIndex);
+
+        // What page will the scrollable need to be on?
+        var targetPage = getPageFromIndex(currentVirtualIndex);
+        
+        // Do we need to move any pages around?
+        if (targetPage !== currentPage) {
+            for (var i = 0; i &lt; numScrolled; i++) {
+                if (left) {
+                    // Pop a view off the end of the collection and move it to the front
+                    containers.unshift(containers.pop());
+                    // Update virtual index and load new view
+                    containers[0].vIndex = containers[1].vIndex + 1;
+                    loadView(containers[0], containers[0].vIndex);
+                } else {
+                    // Shift a view off the beginning of the collection and move it to the end
+                    containers.push(containers.shift());
+                    // Update virtual index and load new view
+                    containers[4].vIndex = containers[3].vIndex - 1;
+                    loadView(containers[4], containers[4].vIndex);
+                }
+            }
+        }		
+		
+		// Added by Dieskim		
+		// START IF - Android else iOS
+		if (Ti.Platform.osname == "android"){
+			
+			previousVirtualIndex = currentVirtualIndex;
+			scrollable.currentPage = targetPage;
+		    scrollable.views = containers;   
+		       		
+			setTimeout(function(){  
+				scrollable.scrollingEnabled	= true;	 
+			}, 1000);       
+					
+		
+		}else{	
+			
+			//  START SCROLL LOCK - Added by Dieskim		
+				
+			// Set previousVirtualIndex to currentVirtualIndex
+			previousVirtualIndex = currentVirtualIndex;  
+				
+			// if scrolled Forward
+			if (left) {
+				var oldHTML = scrollable.views[currentPage+1].children[0].html;
+				scrollable.views[currentPage+1].children[0].addEventListener('load', afterLoadEvent);
+				scrollable.views[currentPage+1].children[0].html =  scrollable.views[currentPage].children[0].html;	
+			// else if scrolled forward
+			}else {			
+				var oldHTML = scrollable.views[currentPage-1].children[0].html;		
+				scrollable.views[currentPage-1].children[0].addEventListener('load', afterLoadEvent);		
+				scrollable.views[currentPage-1].children[0].html =  scrollable.views[currentPage].children[0].html;		 	
+			};	
+				
+			// Function to run after the WebView with new content has loaded	
+			function afterLoadEvent(){
+				
+				//Ti.API.info("afterLoadEvent");
+				
+				setTimeout(function(){  		
+							
+			    	scrollable.currentPage = targetPage;
+				   	scrollable.views = containers;
+				        
+				    if (left) {
+				    	var newCurrentPage = scrollable.currentPage;
+				        scrollable.views[newCurrentPage+1].children[0].removeEventListener('load', afterLoadEvent);
+				        scrollable.views[newCurrentPage+1].children[0].html = oldHTML;
+					} else {
+				        var newCurrentPage = scrollable.currentPage;
+				        scrollable.views[newCurrentPage-1].children[0].removeEventListener('load', afterLoadEvent);
+				        scrollable.views[newCurrentPage-1].children[0].html = oldHTML;	
+				    }
+				    
+				    scrollable.scrollingEnabled	= true;	
+			 
+			 	}, 1000); 
+		 		
+		 	};       
+			//  END SCROLL LOCK - Added by Dieskim		
+			
+		};
+		// END IF - Android else iOS
+		
+	};
+	// END FUNCTION - scrollEndListener
+
+    scrollable.addEventListener(getScrollEndHandlerName(), scrollEndListener);
+	
+	
+    if (options.autoFocus) {
+        // This postlayout hook takes care of focusing the first child
+        function postlayout() {
+            scrollable.views[getPageFromIndex(currentVirtualIndex)].children[0].focus();
+            scrollable.removeEventListener("postlayout", postlayout);
+        }
+
+
+        scrollable.addEventListener("postlayout", postlayout);
+    }
+
+    this.view = scrollable;
+
+    this.dispose = function () {
+        for (var i = 0; i &lt; 5; i++) {
+            scrollable.remove(containers[i]);
+            emptyView(containers[i]);
+            containers[i] = null;
+        }
+        containers = null;
+        scrollable.removeEventListener(getScrollEndHandlerName(), scrollEndListener);
+        if (options.autoFocus) {
+             scrollable.removeEventListener("postlayout", postlayout);
+        }
+
+        scrollable = null;
+    };
+
+    return this;
+}
+
+module.exports = VirtualScroller;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/jquery-3.1.1.min.js"></script>
+
+<script src="scripts/search.js"></script>
+
+
+<script src="scripts/collapse.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<Alloy>
+	<View id="shareWindow">
+		<View id="main">
+			<View id="closeTop">
+				<View id="closeImage" onClick="navigationOpenClose.closeNavigationView"></View>
+			</View>	
+			<View id="shareImageView">
+				<View id="shareImage"></View>	
+			</View>	
+			<View id="shareButtonView">
+				<Button id="shareButton" onClick="shareIntent"></Button>
+			</View>		
+		</View>				
+    </View>
+</Alloy>
