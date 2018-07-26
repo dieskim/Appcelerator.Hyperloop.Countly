@@ -400,6 +400,7 @@ exports.resume = function(){
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-retrieving-the-device-id-and-its-type | Android Retrieving the device id and its type} 
  */ 
 exports.getDeviceID = function(){
+<<<<<<< HEAD
      
     // START IF - iOS / Android
     if (OS_IOS){
@@ -417,6 +418,42 @@ exports.getDeviceID = function(){
      
     // return deviceID
     return deviceID;
+=======
+
+    // get deviceID from Ti.App.Properties
+    var deviceID = Ti.App.Properties.getString('deviceID',false);
+
+    // START IF - deviceID set else generate
+    if (deviceID){
+        
+        //Ti.API.info("Countly deviceID already Set: " + deviceID);
+        return deviceID;
+        
+    }else{
+
+        // START IF - iOS / Android
+        if (OS_IOS){
+             
+            // get deviceID
+            var deviceID = CountlyClass.sharedInstance().deviceID();
+            deviceID = deviceID.toString();
+
+        }else{
+             
+            // get deviceID
+            var deviceID = CountlyClass.sharedInstance().getDeviceID();
+             
+        };
+        // END IF - iOS / Android
+
+        // set deviceID to Ti.App.Properties   
+        Ti.App.Properties.setString('deviceID', deviceID);
+
+        // return deviceID
+        return deviceID;
+
+    };
+>>>>>>> Squashed 'app/lib/updateApp/' changes from f83f2a8f..5de322a6
      
 };
 
