@@ -2,6 +2,7 @@
 <projectDescription>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<name>checkxmlpush</name>
 =======
 	<name>hayatapp</name>
@@ -9,11 +10,26 @@
 =======
 	<name>checkxmliosdateinfo</name>
 >>>>>>> Squashed 'app/lib/checkEnableFeatures/' changes from 1345b09b..863d34bb
+=======
+	<name>hayatapp</name>
+>>>>>>> Squashed 'app/lib/updateApp/' changes from f83f2a8f..5de322a6
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>com.appcelerator.titanium.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.appcelerator.titanium.alloy.core.nature</nature>
+		<nature>com.appcelerator.titanium.mobile.nature</nature>
 	</natures>
 </projectDescription>

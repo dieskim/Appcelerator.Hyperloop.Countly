@@ -1,0 +1,103 @@
+"#settingsWindow[platform=ios]": {
+	top: Alloy.Globals.windowTop,
+	bottom: Alloy.Globals.windowBottom,
+}
+"#backButtonView":{
+width:	"75dp",
+backgroundImage: "/images/hayatnuri.png",
+right: 0,
+top: 0
+}
+"#contentArea":{
+bottom:0,
+height: Ti.UI.FILL,
+width: Ti.UI.FILL,
+layout: "vertical",
+backgroundColor: '#2A2A2A', 
+}
+"#menuScrollView":{
+width:	Ti.UI.FILL,
+height:  Ti.UI.FILL,		
+backgroundColor: "#2A2A2A",
+right: 0,
+top: 0,
+layout: "vertical",
+}
+"#menuTable":{
+	backgroundColor: '#2A2A2A', 
+  	separatorColor: "transparent",	
+}
+".menuViewHead":{
+height: "50dp",
+width:	Ti.UI.FILL,
+top: 0,    
+layout: "vertical",
+backgroundColor: "#90B81A",
+}	
+".menuViewRow":{
+className:'menuViewRow', 					// used to improve table performance
+height: "50dp",
+width:	Ti.UI.FILL,
+top: 0,    
+layout: "vertical",
+backgroundColor: '#2A2A2A',
+}	    
+".menuViewRow[platform=ios]":{
+selectionStyle: Ti.UI.iOS.TableViewCellSelectionStyle.GRAY,
+}
+".menuViewRowSeperator":{
+bottom:0,
+height: "1dp",
+width:	Ti.UI.FILL,
+backgroundColor: '#d7bf87',
+}
+".menuViewBox":{
+height: "50dp",	
+width: Ti.UI.FILL,	
+top:0,
+}
+".menuViewImage":{
+height: Ti.UI.FILL,
+width: "50dp",	
+right: 0,
+}
+".menuViewLabelBox":{
+height: Ti.UI.FILL,
+width: Ti.UI.FILL,	
+right: "50dp",
+}
+".menuViewLabel":{
+right: 5,
+color:'white',
+font: {
+		fontSize: '20dp',
+		fontFamily: Alloy.Globals.customFont},
+}
+"#homeLabel":{
+	text: L("home_button"),
+}	
+"#downloads_label":{
+	text: L("downloads"),
+}
+"#fontsize_label":{
+text: L("fontSize"),	
+}
+"#shareapp_label":{
+text: L("share"),		
+}
+"#contact_label":{
+text: L("contact_us"),	
+}
+"#update_label":{
+text: L("checkForUpdate"),
+font: {
+		fontSize: '18dp',
+		fontFamily: Alloy.Globals.customFont},
+}
+"#questions_label":{
+text: L("questions"),
+}
+"#subscribe_label":{
+text: L("subscriptionHeaderText"),
+}
+

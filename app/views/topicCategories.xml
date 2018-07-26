@@ -1,0 +1,30 @@
+<Alloy>
+	<View id="topicCategoriesWindow">
+			<View id="main">				
+				<View id="topBar">
+					<View id="homeButtonBox">
+						<View id="homeButtonView">	
+							<Button id="backButton" closeFrom="topicsIndex" onClick="navigationOpenClose.closeNavigationView"></Button>					
+						</View>
+					</View>c
+					<View id="titleTop">
+						<Label id="topLabel"></Label>
+					</View>
+					<View id="backButtonBox">
+						<View id="backButtonView">	
+							<Button id="drawerButton" onClick="openCloseMenu"></Button>								
+						</View>
+					</View>
+				</View>						
+				<View id="bottomArea">
+					<View id="contentArea">
+						<ScrollView id="topicScrollView">
+							<View id="topicCategory">
+	        				</View>	
+	        			</ScrollView>		
+					</View>		
+				</View>			
+			</View>
+			<Require src="networkMessageView"/> <!-- Require networkMessageView -->
+	</View>
+</Alloy>

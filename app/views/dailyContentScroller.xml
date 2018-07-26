@@ -1,0 +1,19 @@
+<Alloy>
+	<ScrollableView id="dailyContentScrollable">		
+		<View id="vodContentContainer">
+			<View id="vodScrollingTextContainer">
+			</View>
+			<View id="vodButtonContainer">
+				<View id="vodButton"></View>
+				<Label id="dayNumberLabel"></Label>
+			</View>
+		</View>
+		<View id="qodContentContainer">
+			<View id="qodScrollingTextContainer">
+			</View>
+			<View id="qodButtonContainer">
+				<Button id="qodButton" />
+			</View>
+		</View>	
+	</ScrollableView>
+</Alloy>

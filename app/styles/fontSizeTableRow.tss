@@ -1,0 +1,51 @@
+"#fontSizeViewTableRow":{
+selectionStyle:'none',
+}
+"#fontSizeViewRow":{
+	height: Ti.UI.SIZE,
+	width:	Ti.UI.FILL,
+	top: 0,    
+	layout: "vertical",
+}
+".fontSizeRow":{
+height: "50dp",
+width: Ti.UI.FILL,
+}
+".fontSizeSeperator":{
+bottom:0,
+left:10,
+right:10,
+height: 1,
+width:	Ti.UI.FILL,
+backgroundColor: '#d7bf87',
+}
+".menuViewRowSeperator":{
+bottom:0,
+height: 1,
+width:	Ti.UI.FILL,
+backgroundColor: '#d7bf87',
+}
+"#smallLabel":{
+text: L("fontSizeSmall"),
+font: {
+        fontSize: '18dp',
+        fontFamily: Alloy.Globals.customFont
+    },	
+color: "white",   
+}
+"#mediumLabel":{
+text: L("fontSizeMedium"),	
+font: {
+        fontSize: '22dp',
+        fontFamily: Alloy.Globals.customFont
+    },	
+color: "white",    
+}
+"#largeLabel":{
+text: L("fontSizeLarge"),		
+font: {
+        fontSize: '26dp',
+        fontFamily: Alloy.Globals.customFont
+    },	
+color: "white",    
+}

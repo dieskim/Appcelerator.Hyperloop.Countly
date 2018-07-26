@@ -1,0 +1,4 @@
+"#TopicTextScrollBox":{
+width: Ti.UI.FILL,
+backgroundColor: "#F1EECD",
+}

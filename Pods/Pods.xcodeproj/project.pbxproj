@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		039ECE903EF0A866F3A9763538508625 /* CountlyDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = CECDF45A1FB56F1122C94DEA89F4D54B /* CountlyDeviceInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		04A6B8788AF50257290F4A7B792CC470 /* CountlyViewTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 207F32EF06140589DD74C38DA3BC1B03 /* CountlyViewTracking.m */; };
+		096D818DB47ABD73C85486B422BBC68C /* CountlyConnectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A55E2C40AD057B9D3FC3CEAE279EFB /* CountlyConnectionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AE5A61FF214B6517C4E0659068EFD15 /* CountlyViewTracking.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A945B396FC4D71D881DF0B74509C12 /* CountlyViewTracking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0BD30606F9F0B8287871240855134911 /* CountlyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = AF9C6ABDABFF21313EEB91EAA76FEDC3 /* CountlyEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0D2ACBDAB23388D2344B1F58CA6847C2 /* CountlyPushNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E6F6E7BA2DA03679B4BEE2C64DFD7D /* CountlyPushNotifications.m */; };
+		16518DECB60252BBD0691C1AE11A9FE7 /* CountlyNotificationService.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F10A60B8C5ED27033F1C57E35E82C7 /* CountlyNotificationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A43C4E19AEFDD12AB174C9F9699E47A /* CountlyLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DE642AE0BAEB783C4739030BD3A3933A /* CountlyLocationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1DC43BA992765482E7B385AA771679EF /* CountlyCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61257A5AB15A5749B0F9F6FA938C4D0E /* CountlyCrashReporter.m */; };
+		1F9463DC92E4D52B3CF61E191FAFDBA0 /* CountlyUserDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 261C6C7A28B4519C4B6ACFDAF71C9904 /* CountlyUserDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2101C091A0435A17A8D9D9219879B823 /* CountlyAPM.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC11B1E79E926D88F447C696AAF0CEF /* CountlyAPM.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2CBDA513918C49597AEC46100A6368E8 /* Countly_OpenUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 151A0FEEBFE2DF28DD5112F3446EE169 /* Countly_OpenUDID.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		313ABCB4B77C6E45DACB85D47DC67CAD /* CountlyAPMNetworkLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F6D1F8294C633A6D541795FAEDDF9 /* CountlyAPMNetworkLog.m */; };
+		3877BFE63D9216955122AE68C0020C7E /* CountlyCrashReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8389C109222552F3EEEF27EADA5499 /* CountlyCrashReporter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3B359C0744509010EA41C560DA37E88A /* CountlyUserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FB85AEBCBEC6D306F1ACDBB06809B /* CountlyUserDetails.m */; };
+		41469EFD9683309B476910132C92FD77 /* Countly-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD1D169584A3F36772C961D2ED91B81 /* Countly-dummy.m */; };
+		569E8B8253ED22812090E6C5DFB23BA9 /* CountlyCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A110F63B58F5E51023680851E2011B94 /* CountlyCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A6BA1C25501ECC2CB89D0143C963359 /* Countly.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B3D893FEC43E608BB7E3F80D4A529D /* Countly.m */; };
+		5F2464167FAD5B0D615DA4D5150BDE33 /* CountlyConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E83C2679B2AFF6EB0A6DC8F8EFE992F9 /* CountlyConnectionManager.m */; };
+		62B54B5CFB4F04561F2B76CB0C8391D3 /* CountlyCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B5CE795B44A9EBFF43DC03B2E08125 /* CountlyCommon.m */; };
+		6352AFAC8DFE3E86E03FDD6112844F52 /* CountlyDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E07113DBD34474C9D8B37B89B71CF60 /* CountlyDeviceInfo.m */; };
+		768A54976D321C90A0FFC022DBC645F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7A10485A565EA0DFDD1A7E7C708FD86C /* CountlyConsentManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A1F72ECD0B3663A791E28A013B42E94 /* CountlyConsentManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		826AC26CED1E0568CC4F4150F8CF8D01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		853059607D6EB62ADC2C5D8543DE02FB /* Countly-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6DE755FCB41C5D4E5197CD852B4D6B /* Countly-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85BA41F21A7563026174C39F453C9F80 /* CountlyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B37F7EFBDA285223A18DF20CC2DB59 /* CountlyConfig.m */; };
+		89C250C2FB2916802C11B9EF5C676B8C /* CountlyLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8AB449FC6B11C6C8D7C0416135605D /* CountlyLocationManager.m */; };
+		900A369224B4937A3022E1332A953E20 /* Pods-hayatapp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8990D2C39496CA90ED4055064F9E328 /* Pods-hayatapp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		902821147CB5CC2CBF60065A4AB8CA1E /* CountlyNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A018C22BCB4E8861A32D33DF67C3C87 /* CountlyNotificationService.m */; };
+		914D29174ADB7FDA30409B34A311AEAA /* Countly.h in Headers */ = {isa = PBXBuildFile; fileRef = 2192D9EAF1EBDBD332D1CFA8DDE57781 /* Countly.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9592BAD45AEB073BF57A53E20DB19874 /* CountlyAPM.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D97869315A4519A199C07ADBA01CC9 /* CountlyAPM.m */; };
+		9CFCC3479FE65DDD71A6F131D2030C16 /* CountlyPushNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = 58061845A159445F7CF28FA9D83C3F71 /* CountlyPushNotifications.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA98D520DA3D711923EEE00B5B107EFD /* Pods-hayatapp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 797DB84CA45EC72B802351516E29E3C8 /* Pods-hayatapp-dummy.m */; };
+		B9A40F3799D54B73C5A2E729FDC3AB9B /* CountlyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F23FD2BD068F578939152AB5CF1648 /* CountlyConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C64F1B43234D3CAA7CE04F5C96B4418A /* CountlyPersistency.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D5B6DB194FE561EDB6824073D89247 /* CountlyPersistency.m */; };
+		C897F3971045ED7ED0030CD89E081242 /* CountlyEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E983DC3E26F18AF58DD0EB01EA7E45FE /* CountlyEvent.m */; };
+		D5EA6E09C9705321A19F3FE6CF02244C /* CountlyStarRating.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B093D2725787760EFA987C963BD5B52 /* CountlyStarRating.m */; };
+		DFEC9B7AFCB4B325BF994C0A350F6977 /* CountlyConsentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3993AF3F35B23477FA9A5CF09FFDAC89 /* CountlyConsentManager.m */; };
+		E1B1EED3B2646BC10F45E2F01A3964F7 /* Countly_OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9FDFAB6549905BEA4B5B765F2A2C /* Countly_OpenUDID.m */; };
+		F1A8AA344D2525C61392F2BD448A837C /* CountlyStarRating.h in Headers */ = {isa = PBXBuildFile; fileRef = 62E093DA5B4A44ED351FA397125766D0 /* CountlyStarRating.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F2817DCB442456C376EB4D3EA41C6189 /* CountlyAPMNetworkLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DD52E5AF97D627B281A4F551C1A9FC7 /* CountlyAPMNetworkLog.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FC626911AE556676F6DED949393162DB /* CountlyPersistency.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC626F6B77817CC90A08FCCA46EFF22 /* CountlyPersistency.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		148FCD380769884A1E433C8C23765875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88119D8EB9869BE2DD83460944199405;
+			remoteInfo = Countly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E07113DBD34474C9D8B37B89B71CF60 /* CountlyDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyDeviceInfo.m; sourceTree = "<group>"; };
+		151A0FEEBFE2DF28DD5112F3446EE169 /* Countly_OpenUDID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Countly_OpenUDID.h; sourceTree = "<group>"; };
+		19B3D893FEC43E608BB7E3F80D4A529D /* Countly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Countly.m; sourceTree = "<group>"; };
+		1CE0EB154AF28F9D95D5DA990F5115BD /* Countly.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Countly.xcconfig; sourceTree = "<group>"; };
+		207F32EF06140589DD74C38DA3BC1B03 /* CountlyViewTracking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyViewTracking.m; sourceTree = "<group>"; };
+		2192D9EAF1EBDBD332D1CFA8DDE57781 /* Countly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Countly.h; sourceTree = "<group>"; };
+		261C6C7A28B4519C4B6ACFDAF71C9904 /* CountlyUserDetails.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyUserDetails.h; sourceTree = "<group>"; };
+		26246F7F690EC80305791949769C19C6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A8AB449FC6B11C6C8D7C0416135605D /* CountlyLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyLocationManager.m; sourceTree = "<group>"; };
+		2F72855B58CD32A19CACD8667C235AAF /* Countly-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Countly-prefix.pch"; sourceTree = "<group>"; };
+		2FF7D3A009630D529BA3F5CA1E1CEC5B /* Countly.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Countly.modulemap; sourceTree = "<group>"; };
+		36F23FD2BD068F578939152AB5CF1648 /* CountlyConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyConfig.h; sourceTree = "<group>"; };
+		38A945B396FC4D71D881DF0B74509C12 /* CountlyViewTracking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyViewTracking.h; sourceTree = "<group>"; };
+		3993AF3F35B23477FA9A5CF09FFDAC89 /* CountlyConsentManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyConsentManager.m; sourceTree = "<group>"; };
+		3A018C22BCB4E8861A32D33DF67C3C87 /* CountlyNotificationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyNotificationService.m; sourceTree = "<group>"; };
+		3C98A908FEF1E94B88A021093D1A700F /* Countly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Countly.framework; path = Countly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAF7468ABF6F58550D68F45ED83A3CD /* Pods-hayatapp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hayatapp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		52FF7B1102CFA7F81851D157DCAF4815 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53B5CE795B44A9EBFF43DC03B2E08125 /* CountlyCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyCommon.m; sourceTree = "<group>"; };
+		54D8148A49A02C35E2C4FA3BD55B0584 /* Pods-hayatapp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hayatapp-frameworks.sh"; sourceTree = "<group>"; };
+		58061845A159445F7CF28FA9D83C3F71 /* CountlyPushNotifications.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyPushNotifications.h; sourceTree = "<group>"; };
+		61257A5AB15A5749B0F9F6FA938C4D0E /* CountlyCrashReporter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyCrashReporter.m; sourceTree = "<group>"; };
+		62E093DA5B4A44ED351FA397125766D0 /* CountlyStarRating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyStarRating.h; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		661B883B0678B57A0F906F23BE81FE69 /* Pods-hayatapp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hayatapp-resources.sh"; sourceTree = "<group>"; };
+		6D8389C109222552F3EEEF27EADA5499 /* CountlyCrashReporter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyCrashReporter.h; sourceTree = "<group>"; };
+		6DC11B1E79E926D88F447C696AAF0CEF /* CountlyAPM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyAPM.h; sourceTree = "<group>"; };
+		73A55E2C40AD057B9D3FC3CEAE279EFB /* CountlyConnectionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyConnectionManager.h; sourceTree = "<group>"; };
+		797DB84CA45EC72B802351516E29E3C8 /* Pods-hayatapp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hayatapp-dummy.m"; sourceTree = "<group>"; };
+		8B093D2725787760EFA987C963BD5B52 /* CountlyStarRating.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyStarRating.m; sourceTree = "<group>"; };
+		91C2D455BA5FEE3E7FBF49C6149801C4 /* Pods-hayatapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hayatapp.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99CF0FA0FFB7F92CECB3BB7820A1257C /* Pods_hayatapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_hayatapp.framework; path = "Pods-hayatapp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1F72ECD0B3663A791E28A013B42E94 /* CountlyConsentManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyConsentManager.h; sourceTree = "<group>"; };
+		9DD52E5AF97D627B281A4F551C1A9FC7 /* CountlyAPMNetworkLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyAPMNetworkLog.h; sourceTree = "<group>"; };
+		A110F63B58F5E51023680851E2011B94 /* CountlyCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyCommon.h; sourceTree = "<group>"; };
+		A2E6F6E7BA2DA03679B4BEE2C64DFD7D /* CountlyPushNotifications.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyPushNotifications.m; sourceTree = "<group>"; };
+		A57FB85AEBCBEC6D306F1ACDBB06809B /* CountlyUserDetails.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyUserDetails.m; sourceTree = "<group>"; };
+		A7B37F7EFBDA285223A18DF20CC2DB59 /* CountlyConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyConfig.m; sourceTree = "<group>"; };
+		ABDB9FDFAB6549905BEA4B5B765F2A2C /* Countly_OpenUDID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Countly_OpenUDID.m; sourceTree = "<group>"; };
+		AF9C6ABDABFF21313EEB91EAA76FEDC3 /* CountlyEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyEvent.h; sourceTree = "<group>"; };
+		B67F6D1F8294C633A6D541795FAEDDF9 /* CountlyAPMNetworkLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyAPMNetworkLog.m; sourceTree = "<group>"; };
+		B6F10A60B8C5ED27033F1C57E35E82C7 /* CountlyNotificationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyNotificationService.h; sourceTree = "<group>"; };
+		B8C5A622F6A88806E9ACA178A189DDCA /* Pods-hayatapp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-hayatapp.modulemap"; sourceTree = "<group>"; };
+		BC6DE755FCB41C5D4E5197CD852B4D6B /* Countly-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Countly-umbrella.h"; sourceTree = "<group>"; };
+		BDC626F6B77817CC90A08FCCA46EFF22 /* CountlyPersistency.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyPersistency.h; sourceTree = "<group>"; };
+		CAD1D169584A3F36772C961D2ED91B81 /* Countly-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Countly-dummy.m"; sourceTree = "<group>"; };
+		CECDF45A1FB56F1122C94DEA89F4D54B /* CountlyDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyDeviceInfo.h; sourceTree = "<group>"; };
+		DC17ED9176E2F85D41037799C40875BE /* Pods-hayatapp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hayatapp-acknowledgements.plist"; sourceTree = "<group>"; };
+		DE642AE0BAEB783C4739030BD3A3933A /* CountlyLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CountlyLocationManager.h; sourceTree = "<group>"; };
+		E3D5B6DB194FE561EDB6824073D89247 /* CountlyPersistency.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyPersistency.m; sourceTree = "<group>"; };
+		E83C2679B2AFF6EB0A6DC8F8EFE992F9 /* CountlyConnectionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyConnectionManager.m; sourceTree = "<group>"; };
+		E983DC3E26F18AF58DD0EB01EA7E45FE /* CountlyEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyEvent.m; sourceTree = "<group>"; };
+		F010FFD199B71942EE9792D2B0FCC66E /* Pods-hayatapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hayatapp.debug.xcconfig"; sourceTree = "<group>"; };
+		F4D97869315A4519A199C07ADBA01CC9 /* CountlyAPM.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CountlyAPM.m; sourceTree = "<group>"; };
+		F8990D2C39496CA90ED4055064F9E328 /* Pods-hayatapp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hayatapp-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		414814C061403F4CAEC8BCEE0F03C152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826AC26CED1E0568CC4F4150F8CF8D01 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7AD33F1A064168979648785D817F44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768A54976D321C90A0FFC022DBC645F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31EEFA32905ADC29F5D76C47630C3498 /* Countly */ = {
+			isa = PBXGroup;
+			children = (
+				2192D9EAF1EBDBD332D1CFA8DDE57781 /* Countly.h */,
+				19B3D893FEC43E608BB7E3F80D4A529D /* Countly.m */,
+				151A0FEEBFE2DF28DD5112F3446EE169 /* Countly_OpenUDID.h */,
+				ABDB9FDFAB6549905BEA4B5B765F2A2C /* Countly_OpenUDID.m */,
+				6DC11B1E79E926D88F447C696AAF0CEF /* CountlyAPM.h */,
+				F4D97869315A4519A199C07ADBA01CC9 /* CountlyAPM.m */,
+				9DD52E5AF97D627B281A4F551C1A9FC7 /* CountlyAPMNetworkLog.h */,
+				B67F6D1F8294C633A6D541795FAEDDF9 /* CountlyAPMNetworkLog.m */,
+				A110F63B58F5E51023680851E2011B94 /* CountlyCommon.h */,
+				53B5CE795B44A9EBFF43DC03B2E08125 /* CountlyCommon.m */,
+				36F23FD2BD068F578939152AB5CF1648 /* CountlyConfig.h */,
+				A7B37F7EFBDA285223A18DF20CC2DB59 /* CountlyConfig.m */,
+				73A55E2C40AD057B9D3FC3CEAE279EFB /* CountlyConnectionManager.h */,
+				E83C2679B2AFF6EB0A6DC8F8EFE992F9 /* CountlyConnectionManager.m */,
+				9A1F72ECD0B3663A791E28A013B42E94 /* CountlyConsentManager.h */,
+				3993AF3F35B23477FA9A5CF09FFDAC89 /* CountlyConsentManager.m */,
+				6D8389C109222552F3EEEF27EADA5499 /* CountlyCrashReporter.h */,
+				61257A5AB15A5749B0F9F6FA938C4D0E /* CountlyCrashReporter.m */,
+				CECDF45A1FB56F1122C94DEA89F4D54B /* CountlyDeviceInfo.h */,
+				0E07113DBD34474C9D8B37B89B71CF60 /* CountlyDeviceInfo.m */,
+				AF9C6ABDABFF21313EEB91EAA76FEDC3 /* CountlyEvent.h */,
+				E983DC3E26F18AF58DD0EB01EA7E45FE /* CountlyEvent.m */,
+				DE642AE0BAEB783C4739030BD3A3933A /* CountlyLocationManager.h */,
+				2A8AB449FC6B11C6C8D7C0416135605D /* CountlyLocationManager.m */,
+				B6F10A60B8C5ED27033F1C57E35E82C7 /* CountlyNotificationService.h */,
+				3A018C22BCB4E8861A32D33DF67C3C87 /* CountlyNotificationService.m */,
+				BDC626F6B77817CC90A08FCCA46EFF22 /* CountlyPersistency.h */,
+				E3D5B6DB194FE561EDB6824073D89247 /* CountlyPersistency.m */,
+				58061845A159445F7CF28FA9D83C3F71 /* CountlyPushNotifications.h */,
+				A2E6F6E7BA2DA03679B4BEE2C64DFD7D /* CountlyPushNotifications.m */,
+				62E093DA5B4A44ED351FA397125766D0 /* CountlyStarRating.h */,
+				8B093D2725787760EFA987C963BD5B52 /* CountlyStarRating.m */,
+				261C6C7A28B4519C4B6ACFDAF71C9904 /* CountlyUserDetails.h */,
+				A57FB85AEBCBEC6D306F1ACDBB06809B /* CountlyUserDetails.m */,
+				38A945B396FC4D71D881DF0B74509C12 /* CountlyViewTracking.h */,
+				207F32EF06140589DD74C38DA3BC1B03 /* CountlyViewTracking.m */,
+				5DDDF9E629604B76FB661F3838AEA069 /* NotificationService */,
+				400B26346137495F5588BE7FE33E4BCB /* Support Files */,
+			);
+			name = Countly;
+			path = Countly;
+			sourceTree = "<group>";
+		};
+		37524AD2231A054B4AEF6908DDAF704E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31EEFA32905ADC29F5D76C47630C3498 /* Countly */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		400B26346137495F5588BE7FE33E4BCB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FF7D3A009630D529BA3F5CA1E1CEC5B /* Countly.modulemap */,
+				1CE0EB154AF28F9D95D5DA990F5115BD /* Countly.xcconfig */,
+				CAD1D169584A3F36772C961D2ED91B81 /* Countly-dummy.m */,
+				2F72855B58CD32A19CACD8667C235AAF /* Countly-prefix.pch */,
+				BC6DE755FCB41C5D4E5197CD852B4D6B /* Countly-umbrella.h */,
+				26246F7F690EC80305791949769C19C6 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Countly";
+			sourceTree = "<group>";
+		};
+		5B8608DC70D770C3166383538190609F /* Pods-hayatapp */ = {
+			isa = PBXGroup;
+			children = (
+				52FF7B1102CFA7F81851D157DCAF4815 /* Info.plist */,
+				B8C5A622F6A88806E9ACA178A189DDCA /* Pods-hayatapp.modulemap */,
+				3CAF7468ABF6F58550D68F45ED83A3CD /* Pods-hayatapp-acknowledgements.markdown */,
+				DC17ED9176E2F85D41037799C40875BE /* Pods-hayatapp-acknowledgements.plist */,
+				797DB84CA45EC72B802351516E29E3C8 /* Pods-hayatapp-dummy.m */,
+				54D8148A49A02C35E2C4FA3BD55B0584 /* Pods-hayatapp-frameworks.sh */,
+				661B883B0678B57A0F906F23BE81FE69 /* Pods-hayatapp-resources.sh */,
+				F8990D2C39496CA90ED4055064F9E328 /* Pods-hayatapp-umbrella.h */,
+				F010FFD199B71942EE9792D2B0FCC66E /* Pods-hayatapp.debug.xcconfig */,
+				91C2D455BA5FEE3E7FBF49C6149801C4 /* Pods-hayatapp.release.xcconfig */,
+			);
+			name = "Pods-hayatapp";
+			path = "Target Support Files/Pods-hayatapp";
+			sourceTree = "<group>";
+		};
+		5DDDF9E629604B76FB661F3838AEA069 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NotificationService;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				37524AD2231A054B4AEF6908DDAF704E /* Pods */,
+				DBCACE0562911337BAC2E0A6430CC496 /* Products */,
+				A5A1E0CC91963F4A4A80C9B325FCF23A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A5A1E0CC91963F4A4A80C9B325FCF23A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B8608DC70D770C3166383538190609F /* Pods-hayatapp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DBCACE0562911337BAC2E0A6430CC496 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C98A908FEF1E94B88A021093D1A700F /* Countly.framework */,
+				99CF0FA0FFB7F92CECB3BB7820A1257C /* Pods_hayatapp.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E754D9FE75C40DB4589627EDDF1FC3F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900A369224B4937A3022E1332A953E20 /* Pods-hayatapp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		258D68EAE6A1FB7198615971FC043859 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853059607D6EB62ADC2C5D8543DE02FB /* Countly-umbrella.h in Headers */,
+				914D29174ADB7FDA30409B34A311AEAA /* Countly.h in Headers */,
+				2CBDA513918C49597AEC46100A6368E8 /* Countly_OpenUDID.h in Headers */,
+				2101C091A0435A17A8D9D9219879B823 /* CountlyAPM.h in Headers */,
+				F2817DCB442456C376EB4D3EA41C6189 /* CountlyAPMNetworkLog.h in Headers */,
+				569E8B8253ED22812090E6C5DFB23BA9 /* CountlyCommon.h in Headers */,
+				B9A40F3799D54B73C5A2E729FDC3AB9B /* CountlyConfig.h in Headers */,
+				096D818DB47ABD73C85486B422BBC68C /* CountlyConnectionManager.h in Headers */,
+				7A10485A565EA0DFDD1A7E7C708FD86C /* CountlyConsentManager.h in Headers */,
+				3877BFE63D9216955122AE68C0020C7E /* CountlyCrashReporter.h in Headers */,
+				039ECE903EF0A866F3A9763538508625 /* CountlyDeviceInfo.h in Headers */,
+				0BD30606F9F0B8287871240855134911 /* CountlyEvent.h in Headers */,
+				1A43C4E19AEFDD12AB174C9F9699E47A /* CountlyLocationManager.h in Headers */,
+				16518DECB60252BBD0691C1AE11A9FE7 /* CountlyNotificationService.h in Headers */,
+				FC626911AE556676F6DED949393162DB /* CountlyPersistency.h in Headers */,
+				9CFCC3479FE65DDD71A6F131D2030C16 /* CountlyPushNotifications.h in Headers */,
+				F1A8AA344D2525C61392F2BD448A837C /* CountlyStarRating.h in Headers */,
+				1F9463DC92E4D52B3CF61E191FAFDBA0 /* CountlyUserDetails.h in Headers */,
+				0AE5A61FF214B6517C4E0659068EFD15 /* CountlyViewTracking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5AF91BFB34BAB310A512BE7123FBAA8A /* Pods-hayatapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC0E9F14051321FCFA4306EFCA3ACA69 /* Build configuration list for PBXNativeTarget "Pods-hayatapp" */;
+			buildPhases = (
+				2F9A08D8CA7134847A6C3B3F74188090 /* Sources */,
+				6A7AD33F1A064168979648785D817F44 /* Frameworks */,
+				1E754D9FE75C40DB4589627EDDF1FC3F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DA761156AB8D666FACA7A2373E148D4 /* PBXTargetDependency */,
+			);
+			name = "Pods-hayatapp";
+			productName = "Pods-hayatapp";
+			productReference = 99CF0FA0FFB7F92CECB3BB7820A1257C /* Pods_hayatapp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88119D8EB9869BE2DD83460944199405 /* Countly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6148361D8141865684164FB9C2D463F6 /* Build configuration list for PBXNativeTarget "Countly" */;
+			buildPhases = (
+				E32189A79224CDF4D79EC67A28E3D37D /* Sources */,
+				414814C061403F4CAEC8BCEE0F03C152 /* Frameworks */,
+				258D68EAE6A1FB7198615971FC043859 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Countly;
+			productName = Countly;
+			productReference = 3C98A908FEF1E94B88A021093D1A700F /* Countly.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = DBCACE0562911337BAC2E0A6430CC496 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88119D8EB9869BE2DD83460944199405 /* Countly */,
+				5AF91BFB34BAB310A512BE7123FBAA8A /* Pods-hayatapp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F9A08D8CA7134847A6C3B3F74188090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA98D520DA3D711923EEE00B5B107EFD /* Pods-hayatapp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E32189A79224CDF4D79EC67A28E3D37D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41469EFD9683309B476910132C92FD77 /* Countly-dummy.m in Sources */,
+				5A6BA1C25501ECC2CB89D0143C963359 /* Countly.m in Sources */,
+				E1B1EED3B2646BC10F45E2F01A3964F7 /* Countly_OpenUDID.m in Sources */,
+				9592BAD45AEB073BF57A53E20DB19874 /* CountlyAPM.m in Sources */,
+				313ABCB4B77C6E45DACB85D47DC67CAD /* CountlyAPMNetworkLog.m in Sources */,
+				62B54B5CFB4F04561F2B76CB0C8391D3 /* CountlyCommon.m in Sources */,
+				85BA41F21A7563026174C39F453C9F80 /* CountlyConfig.m in Sources */,
+				5F2464167FAD5B0D615DA4D5150BDE33 /* CountlyConnectionManager.m in Sources */,
+				DFEC9B7AFCB4B325BF994C0A350F6977 /* CountlyConsentManager.m in Sources */,
+				1DC43BA992765482E7B385AA771679EF /* CountlyCrashReporter.m in Sources */,
+				6352AFAC8DFE3E86E03FDD6112844F52 /* CountlyDeviceInfo.m in Sources */,
+				C897F3971045ED7ED0030CD89E081242 /* CountlyEvent.m in Sources */,
+				89C250C2FB2916802C11B9EF5C676B8C /* CountlyLocationManager.m in Sources */,
+				902821147CB5CC2CBF60065A4AB8CA1E /* CountlyNotificationService.m in Sources */,
+				C64F1B43234D3CAA7CE04F5C96B4418A /* CountlyPersistency.m in Sources */,
+				0D2ACBDAB23388D2344B1F58CA6847C2 /* CountlyPushNotifications.m in Sources */,
+				D5EA6E09C9705321A19F3FE6CF02244C /* CountlyStarRating.m in Sources */,
+				3B359C0744509010EA41C560DA37E88A /* CountlyUserDetails.m in Sources */,
+				04A6B8788AF50257290F4A7B792CC470 /* CountlyViewTracking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DA761156AB8D666FACA7A2373E148D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Countly;
+			target = 88119D8EB9869BE2DD83460944199405 /* Countly */;
+			targetProxy = 148FCD380769884A1E433C8C23765875 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		358E8E5BDBE23009735AA19AED214FFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE0EB154AF28F9D95D5DA990F5115BD /* Countly.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Countly/Countly-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Countly/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Countly/Countly.modulemap";
+				PRODUCT_MODULE_NAME = Countly;
+				PRODUCT_NAME = Countly;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62AC4B6DEC567A9C74993A5140FE94FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE0EB154AF28F9D95D5DA990F5115BD /* Countly.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Countly/Countly-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Countly/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Countly/Countly.modulemap";
+				PRODUCT_MODULE_NAME = Countly;
+				PRODUCT_NAME = Countly;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		99095B630C84FC5325A61444D2A6B971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F010FFD199B71942EE9792D2B0FCC66E /* Pods-hayatapp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hayatapp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hayatapp/Pods-hayatapp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4FA68C1517F5AFADE31A323485021F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91C2D455BA5FEE3E7FBF49C6149801C4 /* Pods-hayatapp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hayatapp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hayatapp/Pods-hayatapp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6148361D8141865684164FB9C2D463F6 /* Build configuration list for PBXNativeTarget "Countly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				358E8E5BDBE23009735AA19AED214FFE /* Debug */,
+				62AC4B6DEC567A9C74993A5140FE94FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC0E9F14051321FCFA4306EFCA3ACA69 /* Build configuration list for PBXNativeTarget "Pods-hayatapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99095B630C84FC5325A61444D2A6B971 /* Debug */,
+				D4FA68C1517F5AFADE31A323485021F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

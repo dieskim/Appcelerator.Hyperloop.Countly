@@ -1,0 +1,66 @@
+<h1>Ti.DrawerLayout Documentation</h1>
+
+<p>You can create a Drawer by calling <code>createDrawer</code> on the module. It must be added as a top-level view to a Ti.UI.Window. You may want to pass a <code>contentView</code> property at creation-time. In addition, you can also pass either a <code>leftView</code> or <code>rightView</code> property to add an actual drawer view to your layout. All of them (<code>contentView</code>, <code>leftView</code> and <code>rightView</code>) must be instances of Ti.UI.View.</p>
+
+<p>Here&#39;s an example:</p>
+
+<p><code></code>`javascript
+var TiDrawerLayout = require(&#39;com.tripvi.drawerlayout&#39;);
+var contentView = Ti.UI.createView();
+var leftView = Ti.UI.createTableView({ backgroundColor: &#39;#ccc&#39; });</p>
+
+<p>var drawer = TiDrawerLayout.createDrawer({
+	centerView: contentView,
+	leftView: leftView
+});
+<code></code>`</p>
+
+<p>And this is how you&#39;d do it in Alloy:</p>
+
+<p><code>xml
+&lt;Alloy&gt;
+  &lt;Window&gt;
+		&lt;Drawer id=&quot;drawer&quot; module=&quot;com.tripvi.drawerlayout&quot; /&gt;
+  &lt;/Window&gt;
+&lt;/Alloy&gt;
+</code></p>
+
+<p><code></code>`javascript
+var menu = Alloy.createController(&#39;menu&#39;);
+var main = Alloy.createController(&#39;main&#39;);</p>
+
+<p>$.drawer.setLeftView( menu.getView() );
+$.drawer.setCenterView( main.getView() );</p>
+
+<p><code></code>`</p>
+
+<h2>Properties</h2>
+
+<ul><li><code>leftView</code> <em>(Ti.UI.View)</em> - sets the left drawer</li><li><code>rightView</code> <em>(Ti.UI.View)</em> - sets the right drawer</li><li><code>centerView</code> <em>(Ti.UI.View)</em> - sets the center View</li><li><code>isLeftDrawerOpen</code> <em>(Boolean)</em> - wether the left drawer is currently in an open state or not</li><li><code>isLeftDrawerVisible</code> <em>(Boolean)</em> - wether the left drawer is currently visible on-screen or not</li><li><code>isRightDrawerOpen</code> <em>(Boolean)</em> - wether the right drawer is currently in an open state or not</li><li><code>isRightDrawerVisible</code> <em>(Boolean)</em> - wether the right drawer is currently visible on-screen or not</li><li><code>leftDrawerWidth</code> <em>(Number/String)</em> - sets the width of the left drawer</li><li><code>rightDrawerWidth</code> <em>(Number/String)</em> - sets the width of the right drawer</li><li><code>drawerIndicatorEnabled</code> <em>(Boolean)</em> - wether it should use the ActionBarDrawerToggle or not</li><li>~~<code>drawerIndicatorImage</code>~~ <em>(String)</em> - <strong>(DEPRECATED)</strong> path to a custom drawer indicator image</li><li><code>drawerLockMode</code> <em>(Number)</em> - sets the lock mode constant. TiDrawerLayout.LOCK<em>MODE</em>UNLOCKED (default), TiDrawerLayout.LOCK<em>MODE</em>LOCKED<em>CLOSED, TiDrawerLayout.LOCK</em>MODE<em>LOCKED</em>OPEN</li><li><code>dragMargin</code> <em>(Number)</em> - defines the width of the area the user can swipe the drawer in</li><li><code>hideToolbar</code> <em>(Boolean)</em> - hides the toolbar</li></ul>
+
+<h2>Methods</h2>
+
+<ul><li><code>setLeftView()</code> - sets the value for the <code>leftView</code> property</li><li><code>setRightView()</code> - sets the value for the <code>rightView</code> property</li><li><code>setCenterView()</code> - sets the value for the <code>centerView</code> property</li><li>~~<code>replaceCenterView(view, backstack)</code>~~ - <strong>(DEPRECATED)</strong> same as <code>setCenterView</code> but with second parameter<ul><li><code>view</code> <em>(Ti.UI.View)</em> - the new centerView</li><li><code>backstack</code> <em>(Boolean)</em> - set this to <code>true</code> if you want to add this to the backstack</li></ul></li><li><code>toggleLeftWindow()</code> - opens or closes the left drawer</li><li><code>openLeftWindow()</code> - opens the left drawer</li><li><code>closeLeftWindow()</code> - closes the left drawer</li><li><code>toggleRightWindow()</code> - opens or closes the right drawer</li><li><code>openRightWindow()</code> - opens the right drawer</li><li><code>closeRightWindow()</code> - closes the right drawer</li><li><code>getIsLeftDrawerOpen()</code> - returns the value of the <code>isLeftDrawerOpen</code> property</li><li><code>getIsLeftDrawerVisible()</code> - returns the value of the <code>isLeftDrawerVisible</code> property</li><li><code>getIsRightDrawerOpen()</code> - returns the value of the <code>isRightDrawerOpen</code> property</li><li><code>getIsRightDrawerVisible()</code> - returns the value of the <code>isRightDrawerVisible</code> property</li><li><code>setLeftDrawerWidth()</code> - sets the value for the <code>leftDrawerWidth</code> property</li><li><code>setRightDrawerWidth()</code> - sets the value for the <code>rightDrawerWidth</code> property</li><li><code>setDrawerIndicatorEnabled()</code> - sets the value for the <code>drawerIndicatorEnabled</code> property</li><li>~~<code>setDrawerIndicatorImage()</code>~~ - <strong>(DEPRECATED)</strong> sets the value for the <code>drawerIndicatorImage</code> property</li><li><code>setDrawerLockMode()</code> - sets the value for the <code>drawerLockMode</code> property</li><li><code>setLeftDrawerLockMode()</code> - sets the value for the <code>drawerLockMode</code> property for the left drawer</li><li><code>setRightDrawerLockMode()</code> - sets the value for the <code>drawerLockMode</code> property for the right drawer</li><li>~~<code>setArrowState(value)</code>~~	- <strong>(DEPRECATED)</strong>	sets the state of the drawerArrowIcon<ul><li><code>value</code> <em>(Number)</em>	- state (1 is arrow, 0 is hamburger, but you can set everything between)</li></ul></li><li><code>setToolbarHidden</code> - sets the value for <code>hideToolbar</code> property</li></ul>
+
+<h2>Events</h2>
+
+<ul><li><p><code>change</code> - fires when the drawer motion state changes</p><ul><li><code>state</code> <em>(Number)</em> - the new drawer motion state</li><li><code>idle</code> <em>(Boolean)</em> - indicates that any drawers are in an idle, settled state. No animation is in progress</li><li><code>dragging</code> <em>(Boolean)</em> - indicates that a drawer is currently being dragged by the user</li><li><p><code>settling</code> <em>(Boolean)</em> - indicates that a drawer is in the process of settling to a final position</p></li></ul></li><li><p><code>drawerslide</code> - fires when a drawer&#39;s position changes</p><ul><li><code>offset</code> <em>(Number)</em> - the new offset of this drawer within its range, from 0-1</li><li><p><code>drawer</code> <em>(String)</em> - left or right</p></li></ul></li><li><p><code>draweropen</code> - fires when the drawer motion state changes</p><ul><li><p><code>drawer</code> <em>(String)</em> - left or right</p></li></ul></li><li><p><code>drawerclose</code> - fires when the drawer motion state changes</p><ul><li><code>drawer</code> <em>(String)</em> - left or right</li></ul></li></ul>
+
+<h2>Tricks &amp; Pitfalls</h2>
+
+<ul><li><p>Themes: Actionbar vs. Toolbar</p><ul><li><p>There are two ways to setup the drawer module according to the App bar:</p><ol><li>Traditional: Drawer <em>below</em> App bar (using the Actionbar)<ul><li>use default <code>Theme.AppCompat</code> or <code>Theme.AppCompat.Light</code></li></ul></li><li><p>Material: Drawer <em>covers</em> App bar (using the Toolbar)</p><ul><li>use <code>Theme.AppCompat.NoActionBar</code> or <code>Theme.AppCompat.Light.NoActionBar</code></li><li><p>add toolbar padding</p></li></ul></li></ol></li></ul></li><li><p>Using Drawer for Navigation</p><ul><li>This module only provides the layout itself. The Navigation logic must be done in your own code.</li><li><p>I&#39;ve put together an example app to demonstrate this here: <a href="https://github.com/manumaticx/NavigationDrawer-Demo">NavigationDrawer Demo App</a></p></li></ul></li><li><p>Customizing the drawerArrowToggle</p><ul><li>This is done in your ActionBar theme like this:</li></ul></li></ul>
+
+<pre><code>```xml
+&lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat.Light&quot;&gt;
+	&lt;item name=&quot;drawerArrowStyle&quot;&gt;@style/DrawerArrowStyle&lt;/item&gt;
+&lt;/style&gt;
+
+&lt;style name=&quot;DrawerArrowStyle&quot; parent=&quot;Widget.AppCompat.DrawerArrowToggle&quot;&gt;
+	&lt;item name=&quot;spinBars&quot;&gt;true&lt;/item&gt;
+	&lt;item name=&quot;color&quot;&gt;@android:color/white&lt;/item&gt;
+&lt;/style&gt;
+```
+
+Android Docs: http://developer.android.com/reference/android/support/v7/appcompat/R.styleable.html#DrawerArrowToggle</code></pre>
+
+<ul><li>TabGroup &amp; Drawer<ul><li>Please refer to my answer <a href="https://github.com/manumaticx/Ti.DrawerLayout/issues/32#issuecomment-111413941">here</a></li></ul></li></ul>
