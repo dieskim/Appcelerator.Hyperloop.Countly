@@ -60,21 +60,21 @@
 
     function getDeviceID(){
      
-        Ti.API.log("Countly - getDeviceID");
+        Ti.API.info("Countly - getDeviceID");
          
         var deviceID = Countly.getDeviceID();
          
-        Ti.API.log(deviceID);
+        Ti.API.info(deviceID);
      
     }
      
     function sendEvent(){
          
-        Ti.API.log("Countly - event");
+        Ti.API.info("Countly - event");
          
         var eventData = {key: "test2", segmentation:{test1: "test1"}, count: 1};
          
-        Ti.API.log("Countly - after eventData");
+        Ti.API.info("Countly - after eventData");
      
         Countly.recordEvent(eventData);
          
@@ -83,7 +83,7 @@
      
     function userDetails(){
          
-        Ti.API.log("Countly - userDetails");
+        Ti.API.info("Countly - userDetails");
          
         // set userData object
         var userData = {};
@@ -108,11 +108,11 @@
 
     function recordHandledException(){
         
-        Ti.API.log("Countly - recordCrashLog");
+        Ti.API.info("Countly - recordCrashLog");
 
         Countly.recordCrashLog("This is the log before the Exception");
 
-        Ti.API.log("Countly - recordHandledException");
+        Ti.API.info("Countly - recordHandledException");
         
         // run Countly.crashTest
         Countly.recordHandledException({name: "exceptionType", 
@@ -123,7 +123,7 @@
 
     function recordUnhandledException(){
         
-        Ti.API.log("Countly - recordUnhandledException");
+        Ti.API.info("Countly - recordUnhandledException");
         
         // run Countly.crashTest
         Countly.recordUnhandledException({name: "exceptionType", 
@@ -134,7 +134,7 @@
 
     function recordLocation(){
          
-        Ti.API.log("Countly - recordLocation");
+        Ti.API.info("Countly - recordLocation");
 
         // run Countly.crashTest
         Countly.recordLocation({gpsLocation: {latitude: "33.6895", longitude: "139.6917"}}); 
@@ -242,7 +242,7 @@ exports.enableDebug = function(){
  */ 
 exports.start = function(configVars){
      
-    Ti.API.log(JSON.stringify(configVars));
+    Ti.API.info(JSON.stringify(configVars));
 
     // START IF - iOS / Android
     if(OS_IOS){
@@ -400,23 +400,40 @@ exports.resume = function(){
  * @see {@link https://resources.count.ly/docs/countly-sdk-for-android#section-retrieving-the-device-id-and-its-type | Android Retrieving the device id and its type} 
  */ 
 exports.getDeviceID = function(){
-     
-    // START IF - iOS / Android
-    if (OS_IOS){
-         
-        // get deviceID
-        var deviceID = CountlyClass.sharedInstance().deviceID();
-     
+
+    // get deviceID from Ti.App.Properties
+    var deviceID = Ti.App.Properties.getString('deviceID',false);
+
+    // START IF - deviceID set else generate
+    if (deviceID){
+        
+        //Ti.API.info("Countly deviceID already Set: " + deviceID);
+        return deviceID;
+        
     }else{
-         
-        // get deviceID
-        var deviceID = CountlyClass.sharedInstance().getDeviceID();
-         
+
+        // START IF - iOS / Android
+        if (OS_IOS){
+             
+            // get deviceID
+            var deviceID = CountlyClass.sharedInstance().deviceID();
+            deviceID = deviceID.toString();
+
+        }else{
+             
+            // get deviceID
+            var deviceID = CountlyClass.sharedInstance().getDeviceID();
+             
+        };
+        // END IF - iOS / Android
+
+        // set deviceID to Ti.App.Properties   
+        Ti.App.Properties.setString('deviceID', deviceID);
+
+        // return deviceID
+        return deviceID;
+
     };
-    // END IF - iOS / Android
-     
-    // return deviceID
-    return deviceID;
      
 };
 
@@ -541,7 +558,7 @@ exports.recordUnhandledException = function(exceptionData){
  */ 
 exports.crashTest = function (){
     
-    Ti.API.log("Countly - crashTest");
+    Ti.API.info("Countly - crashTest");
 
     if(OS_IOS){
 
