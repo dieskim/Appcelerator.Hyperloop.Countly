@@ -61,21 +61,21 @@ Countly.start({ appKey: "1a0ea80f9fbd222f76ad444414e6fc9da024",             // a
 
 function getDeviceID(){
 
-    Ti.API.log("Countly - getDeviceID");
+    Ti.API.info("Countly - getDeviceID");
 
     var deviceID = Countly.getDeviceID();
 
-    Ti.API.log(deviceID);
+    Ti.API.info(deviceID);
 
 }
 
 function sendEvent(){
 
-    Ti.API.log("Countly - event");
+    Ti.API.info("Countly - event");
 
     var eventData = {key: "test2", segmentation:{test1: "test1"}, count: 1};
 
-    Ti.API.log("Countly - after eventData");
+    Ti.API.info("Countly - after eventData");
 
     Countly.recordEvent(eventData);
 
@@ -84,7 +84,7 @@ function sendEvent(){
 
 function userDetails(){
 
-    Ti.API.log("Countly - userDetails");
+    Ti.API.info("Countly - userDetails");
 
     // set userData object
     var userData = {};
@@ -109,11 +109,11 @@ function userDetails(){
 
 function recordHandledException(){
 
-    Ti.API.log("Countly - recordCrashLog");
+    Ti.API.info("Countly - recordCrashLog");
 
     Countly.recordCrashLog("This is the log before the Exception");
 
-    Ti.API.log("Countly - recordHandledException");
+    Ti.API.info("Countly - recordHandledException");
 
     // run Countly.crashTest
     Countly.recordHandledException({name: "exceptionType",
@@ -124,7 +124,7 @@ function recordHandledException(){
 
 function recordUnhandledException(){
 
-    Ti.API.log("Countly - recordUnhandledException");
+    Ti.API.info("Countly - recordUnhandledException");
 
     // run Countly.crashTest
     Countly.recordUnhandledException({name: "exceptionType",
@@ -135,7 +135,7 @@ function recordUnhandledException(){
 
 function recordLocation(){
 
-    Ti.API.log("Countly - recordLocation");
+    Ti.API.info("Countly - recordLocation");
 
     // run Countly.crashTest
     Countly.recordLocation({gpsLocation: {latitude: "33.6895", longitude: "139.6917"}});
