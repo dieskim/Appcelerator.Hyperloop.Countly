@@ -4,7 +4,7 @@ Cross-platform Appcelerator Hyperloop Module for [Count.ly Analytics](https://co
 ## This Appcelerator Hyperloop module is a workd in progress and does not currently support all of Count.ly functions.
 ### Please log issues via Github issues
 ### Any pull requests and suggestions welcome!
-### Author: Dieskim of (Kiteplans.info)](https://www.kiteplans.info)
+### Author: Dieskim of (dieskim.me)](https://www.dieskim.me)
 
 ## Installation:
 
